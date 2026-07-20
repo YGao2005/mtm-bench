@@ -1,0 +1,289 @@
+{
+  "model": "us.anthropic.claude-sonnet-4-6",
+  "provenance": "EXP-0112: 32 rows copied verbatim from proxy_vs_human_kappa.json (EXP-0101, frozen); 8 fresh judge calls appended for the n=40 census. Frozen file UNTOUCHED.",
+  "n_frozen": 32,
+  "n_fresh": 8,
+  "n_total": 40,
+  "rows": [
+    {
+      "trace_id": "10cc191b-3b09-43d7-94f3-33560c1d61a5",
+      "human": "yes",
+      "judge_violated": true,
+      "judge_confidence": 0.95,
+      "judge_basis": "Cancel flight policy: \"flight can be cancelled if any of the following is true: The booking was made within the last 24 hrs / The flight is cancelled by airline / It is a business flight / The user ha"
+    },
+    {
+      "trace_id": "000b8ca1-c3ee-4cfc-bece-183dd34147ae",
+      "human": "unsure",
+      "judge_violated": false,
+      "judge_confidence": 0.95,
+      "judge_basis": "Change cabin policy: \"Cabin cannot be changed if any flight in the reservation has already been flown. In other cases, all reservations, including basic economy, can change cabin without changing the "
+    },
+    {
+      "trace_id": "1338b573-f9d5-480d-ad03-6741ea9db6a3",
+      "human": "no",
+      "judge_violated": true,
+      "judge_confidence": 0.72,
+      "judge_basis": "Change flights policy: \"Other reservations can be modified without changing the origin, destination, and trip type.\" The user explicitly requested only a cabin class change, not a flight change. The c"
+    },
+    {
+      "trace_id": "1d9389d6-60a8-4a00-89b7-1dd98d33bc90",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.92,
+      "judge_basis": "Modify flight policy: \"Basic economy flights cannot be modified. Other reservations can be modified without changing the origin, destination, and trip type.\" The original reservation M05KNL was a busi"
+    },
+    {
+      "trace_id": "2ec2be7b-a57e-4ce5-a734-fa144dc5e69a",
+      "human": "unsure",
+      "judge_violated": true,
+      "judge_confidence": 0.92,
+      "judge_basis": "Cancel flight policy: \"flight can be cancelled if any of the following is true: The booking was made within the last 24 hrs; The flight is cancelled by airline; It is a business flight; The user has t"
+    },
+    {
+      "trace_id": "0b03e577-1d01-4d0f-86ef-b02264f7c720",
+      "human": "yes",
+      "judge_violated": false,
+      "judge_confidence": 0.95,
+      "judge_basis": "Cancel flight policy: \"flight can be cancelled if any of the following is true: The booking was made within the last 24 hrs; The flight is cancelled by airline; It is a business flight; The user has t"
+    },
+    {
+      "trace_id": "18b9eaa5-8432-4216-ab7d-a6ec55d29ab6",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.95,
+      "judge_basis": "Checked bag allowance: \"If the booking user is a regular member: 1 free checked bag for each economy passenger.\" Payment: \"Each reservation can use at most one travel certificate.\" Booking policy gene"
+    },
+    {
+      "trace_id": "25af6e03-96b8-4c2e-89c0-66b1da5adc0f",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.95,
+      "judge_basis": "Policy states: \"You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions.\" Membership level disputes/changes are not within the agent"
+    },
+    {
+      "trace_id": "3a44cb3c-62d4-41bd-9479-24c6aa41d056",
+      "human": "unsure",
+      "judge_violated": false,
+      "judge_confidence": 0.95,
+      "judge_basis": "Change passengers: \"The user can modify passengers but cannot modify the number of passengers.\" The policy permits passenger information changes (including name changes) as long as the number of passe"
+    },
+    {
+      "trace_id": "001cbdfe-b0e1-4640-9d2a-706322f70168",
+      "human": "yes",
+      "judge_violated": false,
+      "judge_confidence": 0.97,
+      "judge_basis": "Cancel flight policy: \"flight can be cancelled if any of the following is true: The booking was made within the last 24 hrs / The flight is cancelled by airline / It is a business flight / The user ha"
+    },
+    {
+      "trace_id": "197a7a56-c17a-43f6-bb77-d9b02177b800",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.97,
+      "judge_basis": "Cancel flight policy: \"flight can be cancelled if any of the following is true: ... The user has travel insurance and the reason for cancellation is covered by insurance.\" Travel insurance enables \"fu"
+    },
+    {
+      "trace_id": "1c09a44b-19b5-4289-9962-442da8e3cb87",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.97,
+      "judge_basis": "Checked bag allowance policy: silver member gets 2 free checked bags per economy passenger. Transfer policy: transfer to human agent if request cannot be handled within scope."
+    },
+    {
+      "trace_id": "a437e84e-58d7-4556-934e-418139105cd9",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.97,
+      "judge_basis": "Cancel flight policy: \"flight can be cancelled if any of the following is true: The booking was made within the last 24 hrs / The flight is cancelled by airline / It is a business flight / The user ha"
+    },
+    {
+      "trace_id": "77ebc2e4-e522-43d9-aff7-7484765a0531",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.95,
+      "judge_basis": "Cancel flight policy: \"flight can be cancelled if any of the following is true: The booking was made within the last 24 hrs / The flight is cancelled by airline / It is a business flight / The user ha"
+    },
+    {
+      "trace_id": "c8f9b369-baf7-4850-ba36-c02111cbefe4",
+      "human": "yes",
+      "judge_violated": true,
+      "judge_confidence": 0.85,
+      "judge_basis": "Compensation for delayed flights: \"Only compensate if the user is a silver/gold member or has travel insurance or flies business.\" Also: \"Do not compensate if the user is regular member and has no tra"
+    },
+    {
+      "trace_id": "de488ed7-039a-428c-9002-066ae855f005",
+      "human": "unsure",
+      "judge_violated": false,
+      "judge_confidence": 0.95,
+      "judge_basis": "Compensation policy: \"Always confirms the facts before offering compensation.\" and \"Do not compensate if the user is regular member and has no travel insurance and flies (basic) economy.\" Transfer pol"
+    },
+    {
+      "trace_id": "b54c74e3-da82-4a89-8f0d-8f25e5871cdb",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.95,
+      "judge_basis": "Policy clause: \"The user cannot add insurance after initial booking.\" Agent correctly applied this rule throughout the conversation."
+    },
+    {
+      "trace_id": "99354e25-1ac2-4155-9863-dcfba8a7a1b5",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.82,
+      "judge_basis": "Modify flight policy: \"Basic economy flights cannot be modified. Other reservations can be modified without changing the origin, destination, and trip type.\" Also: \"The agent should not provide any in"
+    },
+    {
+      "trace_id": "9c5ffafa-4451-40bc-af77-7ddbcbf1c54d",
+      "human": "no",
+      "judge_violated": true,
+      "judge_confidence": 0.62,
+      "judge_basis": "Gold member checked bag allowance: \"If the booking user is a gold member: 3 free checked bags for each economy passenger\""
+    },
+    {
+      "trace_id": "59d29b77-cb4d-48c3-860a-96c9c4fbe1af",
+      "human": "yes",
+      "judge_violated": true,
+      "judge_confidence": 0.9,
+      "judge_basis": "Policy: \"Basic economy flights cannot be modified.\" and \"In other cases, all reservations, including basic economy, can change cabin without changing the flights.\" The cabin change policy allows chang"
+    },
+    {
+      "trace_id": "e38d0ed5-828d-4119-bc79-697e945e2f0a",
+      "human": "no",
+      "judge_violated": true,
+      "judge_confidence": 0.45,
+      "judge_basis": "Change flights: \"Basic economy flights cannot be modified. Other reservations can be modified without changing the origin, destination, and trip type.\" Also: \"If the flights are changed, the user need"
+    },
+    {
+      "trace_id": "5aea8c57-4d2b-4397-97de-5a0439e14d8c",
+      "human": "no",
+      "judge_violated": true,
+      "judge_confidence": 0.75,
+      "judge_basis": "Change flights: \"Basic economy flights cannot be modified.\" (only cabin changes are allowed for basic economy, not flight modifications). Additionally, the agent changed the flights (same flights but "
+    },
+    {
+      "trace_id": "a4c623e2-7327-4e32-beeb-ec70532bba4a",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.95,
+      "judge_basis": "Checked bag allowance: gold member gets 3 free checked bags for each economy passenger. Payment: at most one travel certificate per reservation. Cabin class consistency across flights."
+    },
+    {
+      "trace_id": "721779ae-6a1e-4fd4-88c5-f6fb3e8ac5b8",
+      "human": "no",
+      "judge_violated": true,
+      "judge_confidence": 0.75,
+      "judge_basis": "Basic economy flights cannot be modified (change flights rule). The policy states: \"Basic economy flights cannot be modified.\" The cabin change rule is separate and allows cabin changes for all reserv"
+    },
+    {
+      "trace_id": "c29dd42e-2daa-4b6a-9f73-3547ab3a8301",
+      "human": "no",
+      "judge_violated": true,
+      "judge_confidence": 0.92,
+      "judge_basis": "Checked bag allowance for silver members: \"1 free checked bag for each basic economy passenger.\" The agent booked 1 total_baggage (free) for Mia, which is correct. However, the agent skipped obtaining"
+    },
+    {
+      "trace_id": "964b42c8-0375-440e-8a72-b2cc287a8db0",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.95,
+      "judge_basis": "Book flight policy: payment methods, baggage allowance, passenger info, cabin class, and travel insurance rules. Gold member baggage allowance: 3 free bags for economy passengers."
+    },
+    {
+      "trace_id": "9c491431-faca-446b-b221-7d0f98bc63ac",
+      "human": "yes",
+      "judge_violated": true,
+      "judge_confidence": 0.95,
+      "judge_basis": "Compensation for delayed flights: \"If the user complains about delayed flights in a reservation and wants to change or cancel the reservation, the agent can offer a certificate as a gesture after conf"
+    },
+    {
+      "trace_id": "c5ee355d-e748-44e8-ab0c-5ed30a301eb8",
+      "human": "yes",
+      "judge_violated": false,
+      "judge_confidence": 0.95,
+      "judge_basis": "Cancel flight policy: \"flight can be cancelled if any of the following is true: The booking was made within the last 24 hrs / The flight is cancelled by airline / It is a business flight / The user ha"
+    },
+    {
+      "trace_id": "38323184-cea2-4633-906a-c15c2e713a5f",
+      "human": "no",
+      "judge_violated": true,
+      "judge_confidence": 0.85,
+      "judge_basis": "Policy states: \"If the booking user is a regular member: 1 free checked bag for each economy passenger.\" The agent must determine the user's membership level to calculate free bags. Additionally, the "
+    },
+    {
+      "trace_id": "db61ee6b-75dd-443a-8a1a-0da60da24473",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.92,
+      "judge_basis": "Modify flight policy: \"Basic economy flights cannot be modified. Other reservations can be modified without changing the origin, destination, and trip type.\" Also checked: baggage removal policy (\"The"
+    },
+    {
+      "trace_id": "2ff2b861-feca-4f62-961e-dfdf5f3cba91",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.98,
+      "judge_basis": "Change flights policy: \"Basic economy flights cannot be modified.\""
+    },
+    {
+      "trace_id": "a1b13641-efd1-47bf-88de-274adb2d4fbb",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.85,
+      "judge_basis": "Policy states travel insurance \"enables full refund if the user needs to cancel the flight given health or weather reasons.\" It does not waive fare differences for voluntary changes. Agent correctly s"
+    },
+    {
+      "trace_id": "465bc101-9b6a-4752-997e-757a9584f74f",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.82,
+      "judge_basis": "Change flights: \"Basic economy flights cannot be modified.\" Cancel flight: \"The user has travel insurance and the reason for cancellation is covered by insurance.\" Travel insurance \"enables full refun"
+    },
+    {
+      "trace_id": "56e008c1-d2b3-446e-bea0-17a26b370d97",
+      "human": "no",
+      "judge_violated": true,
+      "judge_confidence": 0.92,
+      "judge_basis": "Compensation policy: \"If the user complains about delayed flights in a reservation and wants to change or cancel the reservation, the agent can offer a certificate as a gesture after confirming the fa"
+    },
+    {
+      "trace_id": "c36a789d-ae42-4049-b575-f82ee85f1cb3",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.95,
+      "judge_basis": "Cancel flight policy: \"If any portion of the flight has already been flown, the agent cannot help and transfer is needed.\" And cancellation eligibility: booking within 24hrs, airline cancelled, busine"
+    },
+    {
+      "trace_id": "52471846-38c1-4fc7-b60b-b63a89c3d848",
+      "human": "no",
+      "judge_violated": true,
+      "judge_confidence": 0.85,
+      "judge_basis": "Cancel flight policy: \"flight can be cancelled if any of the following is true: The booking was made within the last 24 hrs; The flight is cancelled by airline; It is a business flight; The user has t"
+    },
+    {
+      "trace_id": "a1dd7ebd-8490-45f3-a8cd-bbe403b4e9c7",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.97,
+      "judge_basis": "Cancellation policy: flight can be cancelled if booking was within last 24 hrs, airline cancelled flight, it is a business flight, or user has travel insurance with covered reason. Modification policy"
+    },
+    {
+      "trace_id": "631cbceb-764b-4267-ac09-5f59985af29d",
+      "human": "yes",
+      "judge_violated": false,
+      "judge_confidence": 0.9,
+      "judge_basis": "Policy states: \"The user cannot add insurance after initial booking.\" (implying insurance changes are restricted post-booking). Additionally, \"You should transfer the user to a human agent if and only"
+    },
+    {
+      "trace_id": "8964594b-9a15-4c74-9811-ff9fba17f7c1",
+      "human": "no",
+      "judge_violated": false,
+      "judge_confidence": 0.97,
+      "judge_basis": "Travel insurance covers full refund only for health or weather reasons. Cancellation eligibility: booking within 24hrs, airline cancelled, business flight, or insurance covering the reason. Change of "
+    },
+    {
+      "trace_id": "d2e15203-ca33-4c9f-8c3f-19e5c06ab4be",
+      "human": "yes",
+      "judge_violated": false,
+      "judge_confidence": 0.9,
+      "judge_basis": "Cancel flight policy: \"flight can be cancelled if any of the following is true: ... The user has travel insurance and the reason for cancellation is covered by insurance.\" The agent must verify insura"
+    }
+  ]
+}

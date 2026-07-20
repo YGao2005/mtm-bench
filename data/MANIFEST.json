@@ -1,0 +1,38 @@
+{
+  "tau2/census_labels.jsonl": {
+    "sha256": "8e8c33a2a1259eccdc123fda8d284d7a8c792fd1b532991ebd9ee234bc3aca78",
+    "bytes": 84457
+  },
+  "tau2/judge_caches/broad_prompt_diagnostic.json": {
+    "sha256": "1fcd5dfa67cff9228fb65bad08024152c7b30ad08ea31a737351b1f220295333",
+    "bytes": 481729
+  },
+  "tau2/judge_caches/shipped_semantic_n32.json": {
+    "sha256": "cf55a45c87eb61a1b476c492c856aacc01191dc0c6a71fbfa3ba56022920c254",
+    "bytes": 12223
+  },
+  "tau2/judge_caches/shipped_semantic_n40.json": {
+    "sha256": "c54fcc4dd52a5d656b993f4dc56543e0792442df85cdd377d4cb7433629fd19e",
+    "bytes": 15190
+  },
+  "tau2/policy/airline.md": {
+    "sha256": "10dc0525421521208be39cee235bba84a16e2bcba9899eb93d92cd81d2f62fc4",
+    "bytes": 7676
+  },
+  "tau2/policy/retail.md": {
+    "sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467",
+    "bytes": 6699
+  },
+  "tau2/reveal.sealed.json": {
+    "sha256": "04ca08b06bb9794946db0e0930e73e7851bfebdff56343ebca8e0f5256613bb6",
+    "bytes": 38784
+  },
+  "tau2/traces_airline_gpt41.json.gz": {
+    "sha256": "ed3856c506c313f5da58f46094c9e9ab9ab00674be75484c2aa56009228edf8d",
+    "bytes": 842612
+  },
+  "tau2/traces_retail_gpt41.json.gz": {
+    "sha256": "cac70fbb9b96aba66560d3cefecacdc747a3424fcc1f3737ea574f6c2978a3ba",
+    "bytes": 2193417
+  }
+}

@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use MtM-Bench, please cite the paper below."
+title: "MtM-Bench: Measuring the Measurers"
+type: software
+authors:
+  - name: "The MtM-Bench authors"
+preferred-citation:
+  type: article
+  title: "Measuring the Measurers: Grading Agent-Failure Detectors, and Knowing When a Benchmark Cannot"
+  authors:
+    - name: "The MtM-Bench authors"
+  year: 2026

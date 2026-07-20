@@ -1,0 +1,2377 @@
+{
+ "_doc": "Frozen held-out split for the Argus superset gate (ADR-0010). Resolved against ARGUS_TAU2_RESULTS_DIR at eval time; raw runs are NOT committed.",
+ "held_out_fraction": 0.5,
+ "split_algo": "stratified sha1(task_id) alternation; all trials of a task on one side",
+ "source_files": {
+  "airline": "gpt-4.1-2025-04-14_airline_default_gpt-4.1-2025-04-14_4trials.json",
+  "retail": "gpt-4.1-2025-04-14_retail_default_gpt-4.1-2025-04-14_4trials.json"
+ },
+ "domains": {
+  "airline": {
+   "n_tasks_total": 50,
+   "n_tasks_held_out": 26,
+   "n_sims_held_out": 104,
+   "entries": [
+    {
+     "task_id": "1",
+     "trial": 0,
+     "sim_id": "f78f4954-8b2b-4b97-b8be-242aa2881d40",
+     "reward": 0.0,
+     "content_hash": "3c73eb92afcbb4ff95895dbef7b2693f571b0cca"
+    },
+    {
+     "task_id": "1",
+     "trial": 1,
+     "sim_id": "d632911c-c84b-4cf3-8215-5a85dacf0a56",
+     "reward": 0.0,
+     "content_hash": "5b6bff0b70a257e67b67ef2669a153b54d09be04"
+    },
+    {
+     "task_id": "1",
+     "trial": 2,
+     "sim_id": "77ebc2e4-e522-43d9-aff7-7484765a0531",
+     "reward": 1.0,
+     "content_hash": "f2072f96e0c1f631a8fdd85ebe7c380f1878f4cd"
+    },
+    {
+     "task_id": "1",
+     "trial": 3,
+     "sim_id": "23b53960-c18d-4d14-a85d-b947deca5a9f",
+     "reward": 0.0,
+     "content_hash": "91fe6a808b1311c02debbc6293a04e2f95e410c2"
+    },
+    {
+     "task_id": "3",
+     "trial": 1,
+     "sim_id": "2011034d-5887-44dd-9514-c31619da2248",
+     "reward": 1.0,
+     "content_hash": "76b51664064638273f752d9fce5514896a2db450"
+    },
+    {
+     "task_id": "3",
+     "trial": 0,
+     "sim_id": "25af6e03-96b8-4c2e-89c0-66b1da5adc0f",
+     "reward": 1.0,
+     "content_hash": "efb0e9451f3426be85cb1d9625ba1b997989dc83"
+    },
+    {
+     "task_id": "3",
+     "trial": 2,
+     "sim_id": "1c09a44b-19b5-4289-9962-442da8e3cb87",
+     "reward": 1.0,
+     "content_hash": "7e158e91218af2369c4b26cc7ee2da1fb81e274b"
+    },
+    {
+     "task_id": "3",
+     "trial": 3,
+     "sim_id": "de8045f7-4c30-4b7f-892d-210abcad11aa",
+     "reward": 1.0,
+     "content_hash": "a06c8a569a162689b7e38d52de237793c1026d9a"
+    },
+    {
+     "task_id": "4",
+     "trial": 1,
+     "sim_id": "80a887ea-c1f4-453c-813d-0a5ca3257f07",
+     "reward": 1.0,
+     "content_hash": "1ce2975492c024ce84e6d281b0169ca0fee64141"
+    },
+    {
+     "task_id": "4",
+     "trial": 0,
+     "sim_id": "de488ed7-039a-428c-9002-066ae855f005",
+     "reward": 1.0,
+     "content_hash": "0fc1412491e564c638d6bf2c34e306152fa20500"
+    },
+    {
+     "task_id": "4",
+     "trial": 2,
+     "sim_id": "6beb0691-cfae-4907-b5f4-ea3ec4bac8c3",
+     "reward": 0.0,
+     "content_hash": "2c832c275aeffa1a9478d4c34362b531900efb23"
+    },
+    {
+     "task_id": "4",
+     "trial": 3,
+     "sim_id": "fe983c02-ee4f-447a-926b-c56ccf05941c",
+     "reward": 1.0,
+     "content_hash": "6e23b8527e5d86de5203779edc136cf9f42437fc"
+    },
+    {
+     "task_id": "5",
+     "trial": 1,
+     "sim_id": "ab71d6dc-ebdb-4b11-9fb9-cce19301c02f",
+     "reward": 0.0,
+     "content_hash": "0d11113b6f476b1eb2ec58ee4e367eb0605f8136"
+    },
+    {
+     "task_id": "5",
+     "trial": 0,
+     "sim_id": "ac075b55-6ccf-49ca-b0fd-caca7dfea488",
+     "reward": 0.0,
+     "content_hash": "17afb1bc02704fa9b560bdcb4e246afefab8a3be"
+    },
+    {
+     "task_id": "5",
+     "trial": 2,
+     "sim_id": "dad965eb-7d36-48b8-8142-83f6cc1c0dca",
+     "reward": 0.0,
+     "content_hash": "4a1426bed6bde756ec2e09aa30a33be82683a218"
+    },
+    {
+     "task_id": "5",
+     "trial": 3,
+     "sim_id": "9fa3cf60-3c0c-4cc7-90c3-b46b12ee44a8",
+     "reward": 0.0,
+     "content_hash": "002f12f9126c53b54c0e9e6f73342653116dbda0"
+    },
+    {
+     "task_id": "7",
+     "trial": 1,
+     "sim_id": "db5a5a7c-c52a-48aa-8abe-1544005f7cdd",
+     "reward": 0.0,
+     "content_hash": "037dcd8c5e1ca595464112038f1027832b5a2695"
+    },
+    {
+     "task_id": "7",
+     "trial": 0,
+     "sim_id": "c2524015-0a79-47e2-9018-98cbe1181f2d",
+     "reward": 0.0,
+     "content_hash": "012d91910f31c0447a17da0433b9b793fb0b4e58"
+    },
+    {
+     "task_id": "7",
+     "trial": 2,
+     "sim_id": "1236f61b-84e2-4729-81f4-4d213df62fb4",
+     "reward": 0.0,
+     "content_hash": "30fad04275a9c71cce443c82ade19b2cdb8a3723"
+    },
+    {
+     "task_id": "7",
+     "trial": 3,
+     "sim_id": "18359742-36d5-491e-b367-f35218f834f5",
+     "reward": 0.0,
+     "content_hash": "e22ff3a560635741d73ae609c1691cb8ea3c8866"
+    },
+    {
+     "task_id": "9",
+     "trial": 1,
+     "sim_id": "a6a3f3a9-ef2d-408b-a87e-0bc6f71f2020",
+     "reward": 0.0,
+     "content_hash": "dc09c6e4aa1277f0b1b35d1abbf389d42ecc0c2f"
+    },
+    {
+     "task_id": "9",
+     "trial": 0,
+     "sim_id": "eaffe6ed-686d-4e06-a4e1-019f894e90b6",
+     "reward": 0.0,
+     "content_hash": "68db9b1a926144bb80cf12c1eba30c7454e32a7c"
+    },
+    {
+     "task_id": "9",
+     "trial": 2,
+     "sim_id": "efa469fc-b1d7-42c7-bec2-e99d8946b047",
+     "reward": 0.0,
+     "content_hash": "46c1a990e2036207141530e83b0c49972baac183"
+    },
+    {
+     "task_id": "9",
+     "trial": 3,
+     "sim_id": "4b982c3c-2faf-49f4-94fd-1fa4e2aaf1ec",
+     "reward": 0.0,
+     "content_hash": "a729bb4ef8b12d1845305e15e2b58ebf61fd5c8a"
+    },
+    {
+     "task_id": "11",
+     "trial": 0,
+     "sim_id": "3dc686b8-92a8-4f44-9eb2-557718e59181",
+     "reward": 1.0,
+     "content_hash": "e015e2be745fb26cc3027a81f56986e8f84c96b9"
+    },
+    {
+     "task_id": "11",
+     "trial": 1,
+     "sim_id": "52e5f9f1-8de6-4e3a-8f32-93a4ef81742b",
+     "reward": 1.0,
+     "content_hash": "2ddabdde3f085729cd477a4e5a86f30c8c650573"
+    },
+    {
+     "task_id": "11",
+     "trial": 2,
+     "sim_id": "000b8ca1-c3ee-4cfc-bece-183dd34147ae",
+     "reward": 1.0,
+     "content_hash": "779ff3b51e7d83be8f012b18169dd331059a8458"
+    },
+    {
+     "task_id": "11",
+     "trial": 3,
+     "sim_id": "c3dfe429-7fbc-47f2-ac5e-be19634c1b52",
+     "reward": 1.0,
+     "content_hash": "47a2dfa135ceb0f304571ec49b5a635f33c3c1d6"
+    },
+    {
+     "task_id": "12",
+     "trial": 0,
+     "sim_id": "9c5ffafa-4451-40bc-af77-7ddbcbf1c54d",
+     "reward": 1.0,
+     "content_hash": "cbddbe41b3fd7d45534b11be975e2fd72dc2df93"
+    },
+    {
+     "task_id": "12",
+     "trial": 1,
+     "sim_id": "4910065a-c418-4d35-9954-0c7060f99b5c",
+     "reward": 0.0,
+     "content_hash": "21a0eba2528bfdf1255bfc9deac0243446281bd7"
+    },
+    {
+     "task_id": "12",
+     "trial": 2,
+     "sim_id": "b60581a2-715c-4ff7-82b6-2164e76e76f0",
+     "reward": 1.0,
+     "content_hash": "24fe4a14be69bbe976afede702bb49f44798b7d5"
+    },
+    {
+     "task_id": "12",
+     "trial": 3,
+     "sim_id": "f9595724-8673-426d-a900-ebb098e245de",
+     "reward": 0.0,
+     "content_hash": "155353ad54bfbd900206d4d10b30cc776a50ab9d"
+    },
+    {
+     "task_id": "16",
+     "trial": 1,
+     "sim_id": "723e0a10-b3cb-42f5-af59-45bb54c6d73d",
+     "reward": 1.0,
+     "content_hash": "3159021ee5d25790dc3b5281d245a20a771b013d"
+    },
+    {
+     "task_id": "16",
+     "trial": 0,
+     "sim_id": "e38d0ed5-828d-4119-bc79-697e945e2f0a",
+     "reward": 1.0,
+     "content_hash": "7e09a9d2f7b82e2f8b9ee765b86a555518752622"
+    },
+    {
+     "task_id": "16",
+     "trial": 2,
+     "sim_id": "6fb6e249-2e5e-4e36-886a-6e13aa8e3d50",
+     "reward": 1.0,
+     "content_hash": "10e5e0eec369e1949af97681234665e34ffd3c31"
+    },
+    {
+     "task_id": "16",
+     "trial": 3,
+     "sim_id": "d1ff9af1-d4b5-4b0f-a80b-fc7dea10c6e9",
+     "reward": 1.0,
+     "content_hash": "ae2d17c7b7d1279dac5f8ae824e327bf4da94d87"
+    },
+    {
+     "task_id": "17",
+     "trial": 1,
+     "sim_id": "41918eae-664e-4879-b9f3-35c4f1d7ad44",
+     "reward": 0.0,
+     "content_hash": "ae7afb1b0f43be61c3d2a7a454dee06cbc70731e"
+    },
+    {
+     "task_id": "17",
+     "trial": 0,
+     "sim_id": "5aea8c57-4d2b-4397-97de-5a0439e14d8c",
+     "reward": 1.0,
+     "content_hash": "18ca8527d55c38016bb659cec16c2a1fcce2b7a6"
+    },
+    {
+     "task_id": "17",
+     "trial": 2,
+     "sim_id": "ff166fa8-9416-4334-a3f1-074e7c71a5fe",
+     "reward": 0.0,
+     "content_hash": "bf219af206786fbad1c487698e6ea10bfa1fea61"
+    },
+    {
+     "task_id": "17",
+     "trial": 3,
+     "sim_id": "3aff27da-a9cb-43af-935b-89bf3cc98dda",
+     "reward": 0.0,
+     "content_hash": "131750d60c3bd7678a66424af98a441ef24cf9b7"
+    },
+    {
+     "task_id": "18",
+     "trial": 0,
+     "sim_id": "9d708a34-a2af-4038-9132-d4a68ef0ae5a",
+     "reward": 1.0,
+     "content_hash": "93bc25b42ee6ea0949a0a057e25bb84603073001"
+    },
+    {
+     "task_id": "18",
+     "trial": 1,
+     "sim_id": "56e0527f-cd45-41f5-be02-8d5d05dbbf30",
+     "reward": 1.0,
+     "content_hash": "cb93b7eeaeb862e6f60778905a5a7047a927e41a"
+    },
+    {
+     "task_id": "18",
+     "trial": 2,
+     "sim_id": "ce2aa8df-35ad-4784-a62c-9ba981bd391a",
+     "reward": 1.0,
+     "content_hash": "1f9503ce0abc316e523a7345f70e9b3012629c23"
+    },
+    {
+     "task_id": "18",
+     "trial": 3,
+     "sim_id": "1338b573-f9d5-480d-ad03-6741ea9db6a3",
+     "reward": 1.0,
+     "content_hash": "de06ce44e142a9c779666a2ef4789e8ee0e6e763"
+    },
+    {
+     "task_id": "21",
+     "trial": 1,
+     "sim_id": "f8bc20e0-2aa0-4539-8b99-41840257cd6a",
+     "reward": 0.0,
+     "content_hash": "a470fde2f7c5b1f26108fcabee20df2da4d549a2"
+    },
+    {
+     "task_id": "21",
+     "trial": 0,
+     "sim_id": "1116057f-9f93-4520-acc6-6eaed1ee1200",
+     "reward": 0.0,
+     "content_hash": "2d22e94eb6e535160d64efb8ab4f5de36ce2e17e"
+    },
+    {
+     "task_id": "21",
+     "trial": 2,
+     "sim_id": "75b54d66-e978-4273-8c6c-5e24ded18044",
+     "reward": 0.0,
+     "content_hash": "22f31ebbe7084ffd0b9a80e598e0cabac5d86b43"
+    },
+    {
+     "task_id": "21",
+     "trial": 3,
+     "sim_id": "c9565c5b-f969-429a-ad81-223cd2dc7567",
+     "reward": 0.0,
+     "content_hash": "25b6c4584783a4c4cdd7642fa25ddbf2ed18efa7"
+    },
+    {
+     "task_id": "22",
+     "trial": 1,
+     "sim_id": "f068f605-a39b-4afb-93ad-19365626fb6e",
+     "reward": 0.0,
+     "content_hash": "f08b49b65aec7410836a9f7040a0492aab3826f4"
+    },
+    {
+     "task_id": "22",
+     "trial": 0,
+     "sim_id": "721779ae-6a1e-4fd4-88c5-f6fb3e8ac5b8",
+     "reward": 1.0,
+     "content_hash": "21a3095910b584da5db8080b54c569c0c1ead657"
+    },
+    {
+     "task_id": "22",
+     "trial": 2,
+     "sim_id": "2dda3500-b106-4238-8332-58e25a5dd76c",
+     "reward": 0.0,
+     "content_hash": "883aacb21be1227ac88496497c73cafef23d106e"
+    },
+    {
+     "task_id": "22",
+     "trial": 3,
+     "sim_id": "eccadb6a-2f62-48ec-9aef-67138005faf0",
+     "reward": 0.0,
+     "content_hash": "fc83c35a1bc1f1972f42fb6987881e7396b1c315"
+    },
+    {
+     "task_id": "24",
+     "trial": 1,
+     "sim_id": "cf8e3319-cc58-424c-805c-9d84a05bfdd7",
+     "reward": 0.0,
+     "content_hash": "051d6d5c7b37f40bd0fc7bdc78ce2d05fc9a154b"
+    },
+    {
+     "task_id": "24",
+     "trial": 0,
+     "sim_id": "c29dd42e-2daa-4b6a-9f73-3547ab3a8301",
+     "reward": 1.0,
+     "content_hash": "e491824b0bb0137cc1bf264a85b28efd37af90f2"
+    },
+    {
+     "task_id": "24",
+     "trial": 2,
+     "sim_id": "e80f6eb9-d140-412c-afda-5bbf7efc6843",
+     "reward": 0.0,
+     "content_hash": "49099fd33b579d8b32612576ccc1683711919570"
+    },
+    {
+     "task_id": "24",
+     "trial": 3,
+     "sim_id": "de2032dd-4ee2-4ad6-b8b2-c99acc3e8c9c",
+     "reward": 0.0,
+     "content_hash": "f74c2413827d25f67d293813e3c80cae94309189"
+    },
+    {
+     "task_id": "26",
+     "trial": 1,
+     "sim_id": "8be87fb0-dd36-4072-b39d-36bd2f87b89c",
+     "reward": 1.0,
+     "content_hash": "9c74ed69cb76bc7c5b4f8daf396658ca7e7e8b8a"
+    },
+    {
+     "task_id": "26",
+     "trial": 0,
+     "sim_id": "001cbdfe-b0e1-4640-9d2a-706322f70168",
+     "reward": 1.0,
+     "content_hash": "15265badc404b4e2e36728c9121d2b4d8f41f150"
+    },
+    {
+     "task_id": "26",
+     "trial": 2,
+     "sim_id": "ae2cf265-b025-45fc-895a-b6d8897aa7ed",
+     "reward": 1.0,
+     "content_hash": "9ef5a904316ef5bc7dd5bb4a0c4d8572bb406677"
+    },
+    {
+     "task_id": "26",
+     "trial": 3,
+     "sim_id": "93d859bb-a5e8-4322-95f5-88b04e609b7b",
+     "reward": 1.0,
+     "content_hash": "f549225bd030a5b8215ca2536e95110e95a1ae00"
+    },
+    {
+     "task_id": "28",
+     "trial": 0,
+     "sim_id": "c5ee355d-e748-44e8-ab0c-5ed30a301eb8",
+     "reward": 1.0,
+     "content_hash": "f2548fae7ebff297418e02512cd2837337eff2ce"
+    },
+    {
+     "task_id": "28",
+     "trial": 1,
+     "sim_id": "d6173286-ff13-480a-869a-8192adf05987",
+     "reward": 1.0,
+     "content_hash": "40810d2fe02b99647bb81abfac3e2d809952e6b8"
+    },
+    {
+     "task_id": "28",
+     "trial": 2,
+     "sim_id": "709a7ef2-1a9e-49bf-8f14-d4da5a110c9e",
+     "reward": 1.0,
+     "content_hash": "59c662ea24a123cdedc497758afe258e966cbcaa"
+    },
+    {
+     "task_id": "28",
+     "trial": 3,
+     "sim_id": "430ae88b-75ff-4085-82ad-3c4839eb5eaa",
+     "reward": 1.0,
+     "content_hash": "0e5886229cf257da7ed8b80a60da6063f042cb5e"
+    },
+    {
+     "task_id": "29",
+     "trial": 0,
+     "sim_id": "38323184-cea2-4633-906a-c15c2e713a5f",
+     "reward": 1.0,
+     "content_hash": "dd357623cd4bb0421d5845e78d42d31f3417ad9b"
+    },
+    {
+     "task_id": "29",
+     "trial": 1,
+     "sim_id": "e2ffcdbf-cc6f-4389-a632-71358a90adca",
+     "reward": 1.0,
+     "content_hash": "154a48713d2dca500c83fdc1e86f6cc9573bc639"
+    },
+    {
+     "task_id": "29",
+     "trial": 2,
+     "sim_id": "9c2f19dd-0db0-4542-845e-e2b36bc8229a",
+     "reward": 0.0,
+     "content_hash": "f2ceefaebdf0fda419c7e2f28894ca66cc865814"
+    },
+    {
+     "task_id": "29",
+     "trial": 3,
+     "sim_id": "0b8bbbd7-3974-46c2-85dd-505f7f52e3cf",
+     "reward": 1.0,
+     "content_hash": "a861dae3753fc53cefd1b77e8944a5be6a4e12a0"
+    },
+    {
+     "task_id": "30",
+     "trial": 0,
+     "sim_id": "db61ee6b-75dd-443a-8a1a-0da60da24473",
+     "reward": 1.0,
+     "content_hash": "fd52a71b825df967be9abf811576b351fecc11f7"
+    },
+    {
+     "task_id": "30",
+     "trial": 1,
+     "sim_id": "6f0c4b94-b267-4139-88d8-39c24044b2dd",
+     "reward": 1.0,
+     "content_hash": "33b87e6a9364d5175497783c39d9b602ab491371"
+    },
+    {
+     "task_id": "30",
+     "trial": 2,
+     "sim_id": "c36cf70e-cc32-4c8f-affd-14964eb0bdaa",
+     "reward": 1.0,
+     "content_hash": "3f55c2996c0d9a2789d4dd09139bcd6978a874b6"
+    },
+    {
+     "task_id": "30",
+     "trial": 3,
+     "sim_id": "eb45835d-05f5-4fe6-82e4-4f1f827aed8c",
+     "reward": 1.0,
+     "content_hash": "2e6ed0398a057bba259fbb48fc103995e635e8df"
+    },
+    {
+     "task_id": "31",
+     "trial": 0,
+     "sim_id": "2ff2b861-feca-4f62-961e-dfdf5f3cba91",
+     "reward": 1.0,
+     "content_hash": "181c7436c7e2442ff2043dc4619dfd5b508637ef"
+    },
+    {
+     "task_id": "31",
+     "trial": 1,
+     "sim_id": "e72aa2ea-753c-4950-9018-440533f20f0e",
+     "reward": 1.0,
+     "content_hash": "8c8a427e918443c2035f86c5243b2268d13ed722"
+    },
+    {
+     "task_id": "31",
+     "trial": 2,
+     "sim_id": "8ff46913-65d6-4657-93c1-8e732f842062",
+     "reward": 1.0,
+     "content_hash": "b2c64e16897a4fef99cade852ffbe8f6807b8ac6"
+    },
+    {
+     "task_id": "31",
+     "trial": 3,
+     "sim_id": "c8c33d33-4667-4c57-89f0-00f6f4d26ba4",
+     "reward": 1.0,
+     "content_hash": "dd329da3fc51d1882d640e51476d7de2a3972ba9"
+    },
+    {
+     "task_id": "35",
+     "trial": 0,
+     "sim_id": "f2b6f9d2-088e-4b6a-8d4e-65fb73d731e4",
+     "reward": 0.0,
+     "content_hash": "2ab34887c681f6feb07b5d6e7320e91f23a27df9"
+    },
+    {
+     "task_id": "35",
+     "trial": 1,
+     "sim_id": "cc4ff642-ae83-491c-82f7-590dab44dc94",
+     "reward": 0.0,
+     "content_hash": "ca77182e120d73238cbc6d49f3c1260e8f61122d"
+    },
+    {
+     "task_id": "35",
+     "trial": 2,
+     "sim_id": "b065ded1-3865-444a-bdb8-c75e72150f83",
+     "reward": 0.0,
+     "content_hash": "aa0aee4bd5911adee995942c2d48cdf08b007c64"
+    },
+    {
+     "task_id": "35",
+     "trial": 3,
+     "sim_id": "4124a4bf-280b-4df5-9d1b-10bab8cf6020",
+     "reward": 0.0,
+     "content_hash": "44a87acf3ccb1a5a22c352b6ba9ff9230a4da261"
+    },
+    {
+     "task_id": "38",
+     "trial": 0,
+     "sim_id": "fc6833f7-76e4-4343-9712-7667336f1861",
+     "reward": 0.0,
+     "content_hash": "88d7b4b6e7cf02dd43cc9708b66d1354bd9d10ed"
+    },
+    {
+     "task_id": "38",
+     "trial": 1,
+     "sim_id": "56e008c1-d2b3-446e-bea0-17a26b370d97",
+     "reward": 1.0,
+     "content_hash": "20f7932e4f845d5ffcaec7896eff3853b1c4e8ce"
+    },
+    {
+     "task_id": "38",
+     "trial": 2,
+     "sim_id": "74bc0a6b-e755-4ef9-81b7-6a247aa332ac",
+     "reward": 0.0,
+     "content_hash": "c507e4a82907cc14c43603254920d53875cb7f23"
+    },
+    {
+     "task_id": "38",
+     "trial": 3,
+     "sim_id": "46ce2d5a-c579-4a29-8c88-e42ef6a7e35b",
+     "reward": 0.0,
+     "content_hash": "a71ec863f364ce7d49ee73174ced2ea65f2b5791"
+    },
+    {
+     "task_id": "40",
+     "trial": 1,
+     "sim_id": "3a44cb3c-62d4-41bd-9479-24c6aa41d056",
+     "reward": 1.0,
+     "content_hash": "b976dc1c6b2855c32d7f53bdd5cc0143260289c0"
+    },
+    {
+     "task_id": "40",
+     "trial": 0,
+     "sim_id": "d9256fd0-9da2-471d-9d13-eeba0cb2b3ec",
+     "reward": 1.0,
+     "content_hash": "95bce607ecd101bb5fb20c712dd3a639111a2688"
+    },
+    {
+     "task_id": "40",
+     "trial": 2,
+     "sim_id": "946e2db8-3e1b-4885-9f2d-379a182dd7db",
+     "reward": 1.0,
+     "content_hash": "3b33c3f85da98169231754f6018d79113471b14a"
+    },
+    {
+     "task_id": "40",
+     "trial": 3,
+     "sim_id": "d663842b-0c52-4842-9183-819a23388fed",
+     "reward": 1.0,
+     "content_hash": "80f0dbfe51011ac97062f16e0f74e1c5326c746e"
+    },
+    {
+     "task_id": "41",
+     "trial": 1,
+     "sim_id": "c36a789d-ae42-4049-b575-f82ee85f1cb3",
+     "reward": 1.0,
+     "content_hash": "9b24b552534700092b6fb305fb3bb0ff8b735d0c"
+    },
+    {
+     "task_id": "41",
+     "trial": 0,
+     "sim_id": "654f411f-53b7-4d35-98f1-e88095f704e4",
+     "reward": 0.0,
+     "content_hash": "e00639158aa8d1bc85b5d424a54e591c2b0acd65"
+    },
+    {
+     "task_id": "41",
+     "trial": 2,
+     "sim_id": "adaa4da0-cf3a-4d63-8c12-0b3a65e37d2e",
+     "reward": 0.0,
+     "content_hash": "6ce0b0164da96da38cc8fd9c9ffb83e12a75fee5"
+    },
+    {
+     "task_id": "41",
+     "trial": 3,
+     "sim_id": "bb9694b4-1499-4b37-94c1-702ba81eb401",
+     "reward": 0.0,
+     "content_hash": "09b11b85ce2221489613671bfbe04e631c4d61c4"
+    },
+    {
+     "task_id": "43",
+     "trial": 1,
+     "sim_id": "366e1d12-700b-4b40-a723-e021bc03c4bb",
+     "reward": 0.0,
+     "content_hash": "b10d353905fb630ced0a8deffaa1c236a643f629"
+    },
+    {
+     "task_id": "43",
+     "trial": 0,
+     "sim_id": "d1290897-ecb4-47fc-8cf5-d0f2fd4acbf1",
+     "reward": 1.0,
+     "content_hash": "b7ec1acadd6df9869c87f62a7400626eb852ada3"
+    },
+    {
+     "task_id": "43",
+     "trial": 2,
+     "sim_id": "0b03e577-1d01-4d0f-86ef-b02264f7c720",
+     "reward": 1.0,
+     "content_hash": "5dc2625220501df8850d5af51136c01e31a4e51d"
+    },
+    {
+     "task_id": "43",
+     "trial": 3,
+     "sim_id": "39ee6449-2640-42f6-9276-29b0f353b0c8",
+     "reward": 0.0,
+     "content_hash": "04c6fa497d865af986c295c6244a136bc6ad080d"
+    },
+    {
+     "task_id": "48",
+     "trial": 0,
+     "sim_id": "830f1ac4-f6d3-4d6b-95b1-f52045527e10",
+     "reward": 0.0,
+     "content_hash": "92dc661c5be2f8ee57f89502375ab18c39fd9b15"
+    },
+    {
+     "task_id": "48",
+     "trial": 1,
+     "sim_id": "b08e65fe-4016-4e3c-849d-62c08de65a44",
+     "reward": 0.0,
+     "content_hash": "9cb50172833931aa0630074cf45cfcd993434db1"
+    },
+    {
+     "task_id": "48",
+     "trial": 2,
+     "sim_id": "3e179de7-ec29-4db0-8a5c-e912dbd499db",
+     "reward": 0.0,
+     "content_hash": "875801b0edbf2727ea94cbc143a5788df2842269"
+    },
+    {
+     "task_id": "48",
+     "trial": 3,
+     "sim_id": "4cffc770-83a1-4ff3-870f-66f69794c8fc",
+     "reward": 0.0,
+     "content_hash": "a578c621ac6211d78a8b1f2f4c65e3f07b9bc4a1"
+    },
+    {
+     "task_id": "49",
+     "trial": 1,
+     "sim_id": "66d5be97-492e-4e6c-b045-52ec8dab2acc",
+     "reward": 1.0,
+     "content_hash": "485b12e78985814d4cc0dcff92bad0b0226ef9fc"
+    },
+    {
+     "task_id": "49",
+     "trial": 0,
+     "sim_id": "d2e15203-ca33-4c9f-8c3f-19e5c06ab4be",
+     "reward": 1.0,
+     "content_hash": "e00399bfab6581eaf5b55fe2230bc7f5879de1e2"
+    },
+    {
+     "task_id": "49",
+     "trial": 2,
+     "sim_id": "cfc869b9-c3a1-48eb-bb1d-0567c61718dc",
+     "reward": 1.0,
+     "content_hash": "85e9f5a0e8817d689df5a9da59be3387e05c6b5c"
+    },
+    {
+     "task_id": "49",
+     "trial": 3,
+     "sim_id": "8f92a1bf-066f-415a-9e95-07a2922d8cae",
+     "reward": 1.0,
+     "content_hash": "5bff7b4742d1123e334a8a55dca2a7f3b6647970"
+    }
+   ]
+  },
+  "retail": {
+   "n_tasks_total": 114,
+   "n_tasks_held_out": 58,
+   "n_sims_held_out": 232,
+   "entries": [
+    {
+     "task_id": "1",
+     "trial": 0,
+     "sim_id": "1575ad14-91a3-4396-b587-6d80b54fd19d",
+     "reward": 0.0,
+     "content_hash": "3df8fa134bff68f0ae94a15d47b7ab3a10d14528"
+    },
+    {
+     "task_id": "1",
+     "trial": 1,
+     "sim_id": "e7c2329c-4758-4ed7-b3b5-a73f627229c2",
+     "reward": 1.0,
+     "content_hash": "a1f3a1f43c8fbc11b66d103583c583539999fb9c"
+    },
+    {
+     "task_id": "1",
+     "trial": 2,
+     "sim_id": "a27110c6-e0ec-42ca-9b48-caa87c1187f8",
+     "reward": 1.0,
+     "content_hash": "ca2bd2db15161e047af76c5cd0b0ede148ff2ae4"
+    },
+    {
+     "task_id": "1",
+     "trial": 3,
+     "sim_id": "2579a109-def2-4f3b-8538-006c4e19e2e5",
+     "reward": 1.0,
+     "content_hash": "8bc20db2f3250e1d5060e5f1b9f9b8cc46fe2fde"
+    },
+    {
+     "task_id": "3",
+     "trial": 0,
+     "sim_id": "66b18827-509b-4393-b71a-33eca57b6791",
+     "reward": 0.0,
+     "content_hash": "4d98920c34d3a2aa1c4a744fc62d7bd531e42108"
+    },
+    {
+     "task_id": "3",
+     "trial": 1,
+     "sim_id": "6be03461-43aa-4047-b8ea-0568a8abfe3a",
+     "reward": 0.0,
+     "content_hash": "e80d2421ed9f638717cbeca57dc697d09b7d95df"
+    },
+    {
+     "task_id": "3",
+     "trial": 2,
+     "sim_id": "d28aa91c-964d-4593-80b4-5bbd3b14715f",
+     "reward": 0.0,
+     "content_hash": "044a79777461ff64475830965503ae9665888e18"
+    },
+    {
+     "task_id": "3",
+     "trial": 3,
+     "sim_id": "4663f804-0737-4945-840b-4da33a32c74e",
+     "reward": 0.0,
+     "content_hash": "6a19fe6385ecdb7f556de2165c3572a3ae0ce953"
+    },
+    {
+     "task_id": "4",
+     "trial": 0,
+     "sim_id": "3ac241bf-f26f-475e-9561-7677bcbb5ce4",
+     "reward": 0.0,
+     "content_hash": "57373e7a00dcf6c6ffea6893e2d422a441d310d1"
+    },
+    {
+     "task_id": "4",
+     "trial": 1,
+     "sim_id": "3f47d124-7d45-4a0c-a7d5-45a05860ba12",
+     "reward": 0.0,
+     "content_hash": "88067541d7a0400bef23e79fee5ea0949c5c08b6"
+    },
+    {
+     "task_id": "4",
+     "trial": 2,
+     "sim_id": "32c2effc-04f4-47f2-85e1-45740020c017",
+     "reward": 0.0,
+     "content_hash": "9f84d85ffca619883c46c9ac622ac4499fa89f9f"
+    },
+    {
+     "task_id": "4",
+     "trial": 3,
+     "sim_id": "4a42f4f3-f624-4dee-8278-ff4794e5bd39",
+     "reward": 0.0,
+     "content_hash": "053a135fc70f2327164d3eabb0f8bfda5d0c02e1"
+    },
+    {
+     "task_id": "9",
+     "trial": 0,
+     "sim_id": "8d1d946f-d7cb-4805-be1b-738e06e3f4f9",
+     "reward": 1.0,
+     "content_hash": "8c8c9d72e109812c42dd61b1ae7c79dae26ae836"
+    },
+    {
+     "task_id": "9",
+     "trial": 1,
+     "sim_id": "7b00f78e-4835-4103-975b-856c01872f85",
+     "reward": 1.0,
+     "content_hash": "285d700b2d0b5a91373c6ca525e3fb0d9275cf81"
+    },
+    {
+     "task_id": "9",
+     "trial": 2,
+     "sim_id": "eaef4e64-9709-4ecf-96de-c3956a88d18a",
+     "reward": 1.0,
+     "content_hash": "c2b25403aa269c04f94e1fd9f1ebebbbfa7e2e0c"
+    },
+    {
+     "task_id": "9",
+     "trial": 3,
+     "sim_id": "1c920f78-f8cd-4685-bb37-02e3d92e7461",
+     "reward": 1.0,
+     "content_hash": "7dfa11cefcba434d1fd66efac120b86de178b665"
+    },
+    {
+     "task_id": "11",
+     "trial": 0,
+     "sim_id": "30490418-7cd3-4028-a1a1-f55c2c3693e2",
+     "reward": 1.0,
+     "content_hash": "49a51d4f6dea88db6ac3a8a8a6e7735870f4b457"
+    },
+    {
+     "task_id": "11",
+     "trial": 1,
+     "sim_id": "b4875788-82cc-412b-b290-89da77ecb0cf",
+     "reward": 1.0,
+     "content_hash": "29789ade95ed022941573fdf96186857c02360e5"
+    },
+    {
+     "task_id": "11",
+     "trial": 2,
+     "sim_id": "1fd10aa6-3717-4067-a676-4f2d4b698348",
+     "reward": 1.0,
+     "content_hash": "0d60e9b218eb2949b493d8687c968c3fb735bd31"
+    },
+    {
+     "task_id": "11",
+     "trial": 3,
+     "sim_id": "c15ab2bb-b81e-4919-b0ca-e9d0dc0847db",
+     "reward": 1.0,
+     "content_hash": "0733bff9b23a0aa937a2268552fcb3dc914eb5e0"
+    },
+    {
+     "task_id": "12",
+     "trial": 0,
+     "sim_id": "ee007599-ff62-4eae-b482-f6f1272d879b",
+     "reward": 1.0,
+     "content_hash": "0e34cc4cfccb28173d4bee1febce5f28189a39c6"
+    },
+    {
+     "task_id": "12",
+     "trial": 1,
+     "sim_id": "afe1ad86-fedf-4c29-b6f8-0fdd24986852",
+     "reward": 1.0,
+     "content_hash": "7184149e219bc628185d074246b0d19dfa28ba73"
+    },
+    {
+     "task_id": "12",
+     "trial": 2,
+     "sim_id": "7cd3285a-fdc9-48a7-bfe5-db6340f4ca6a",
+     "reward": 1.0,
+     "content_hash": "b408231a7fb7c0e1ee0b9e0acded2ed4e2b730d5"
+    },
+    {
+     "task_id": "12",
+     "trial": 3,
+     "sim_id": "2ae75e0a-1af0-4836-89f3-341919db084e",
+     "reward": 1.0,
+     "content_hash": "452f0fcc66b47397324aa462e7e1069e9daf4b94"
+    },
+    {
+     "task_id": "16",
+     "trial": 0,
+     "sim_id": "6b5f3178-eae8-4bbe-9dcd-0d7d5d80e8c2",
+     "reward": 1.0,
+     "content_hash": "08cb2fceb6917e387c9a543a469d75c989c076b6"
+    },
+    {
+     "task_id": "16",
+     "trial": 1,
+     "sim_id": "88a8bb14-f7fe-4929-91ce-d7d1a4bb0314",
+     "reward": 1.0,
+     "content_hash": "4e03a67f350dd86776f9137e6e5ae91964f70e57"
+    },
+    {
+     "task_id": "16",
+     "trial": 2,
+     "sim_id": "c5d90f50-8e86-41fe-9b9f-a66db8f27356",
+     "reward": 1.0,
+     "content_hash": "838776c48c5c93e1ebc861066941138d74f98e55"
+    },
+    {
+     "task_id": "16",
+     "trial": 3,
+     "sim_id": "cac6c5cb-b732-4f5f-abdb-3159d69896e6",
+     "reward": 1.0,
+     "content_hash": "988fb0494ea0e6e6b98a22ae0db6f167eaa4c9c6"
+    },
+    {
+     "task_id": "17",
+     "trial": 0,
+     "sim_id": "c0bb9f34-66f5-44a6-9a27-89200e70eb34",
+     "reward": 1.0,
+     "content_hash": "d222d83c18964c975daf7844b6d7c863f7044d49"
+    },
+    {
+     "task_id": "17",
+     "trial": 1,
+     "sim_id": "3df536d7-3306-47a6-a841-057af5f9c6ce",
+     "reward": 1.0,
+     "content_hash": "682eb1f1c0751b007a37322dbeb600c99d435948"
+    },
+    {
+     "task_id": "17",
+     "trial": 2,
+     "sim_id": "00b92b78-d06b-4db4-958d-e4a5c0543857",
+     "reward": 1.0,
+     "content_hash": "dd26315e49b2b9e8df6ea01657cf9b213bdd3346"
+    },
+    {
+     "task_id": "17",
+     "trial": 3,
+     "sim_id": "ced265d8-865d-4f79-9710-2a281313ba53",
+     "reward": 1.0,
+     "content_hash": "6dca6b77d08174d91999576dafbef1e80f92833c"
+    },
+    {
+     "task_id": "20",
+     "trial": 0,
+     "sim_id": "096846f7-caca-41ee-94fa-780b70d06434",
+     "reward": 0.0,
+     "content_hash": "7bfb19372af5b0477f176fc0d933dd73c7d8e324"
+    },
+    {
+     "task_id": "20",
+     "trial": 1,
+     "sim_id": "93625e08-069b-42d4-a2b0-39ef1fc5aac4",
+     "reward": 0.0,
+     "content_hash": "cfd7a98665b7a1f8b04c82d35bf6d6298ff8f2be"
+    },
+    {
+     "task_id": "20",
+     "trial": 2,
+     "sim_id": "efe159ef-d398-4bca-8d6d-dfc1f8d42ca2",
+     "reward": 0.0,
+     "content_hash": "e717b389cf4154b0017234151e5b696217c0817c"
+    },
+    {
+     "task_id": "20",
+     "trial": 3,
+     "sim_id": "1c221356-a9a2-4c8e-a72b-6e2523ca894b",
+     "reward": 0.0,
+     "content_hash": "86fc05a11d6f1bfa072682f14f52b4abd16dba83"
+    },
+    {
+     "task_id": "21",
+     "trial": 0,
+     "sim_id": "b881a625-d186-4b36-a547-18dd57efe8d3",
+     "reward": 1.0,
+     "content_hash": "e77246619cd0de8931d7a5df0f0cd72c3be2f696"
+    },
+    {
+     "task_id": "21",
+     "trial": 1,
+     "sim_id": "d5b66d0e-2504-4386-9e3e-fc872cd02f17",
+     "reward": 1.0,
+     "content_hash": "e1e317eccf71f9a63824093082726f492535de22"
+    },
+    {
+     "task_id": "21",
+     "trial": 2,
+     "sim_id": "fabbac0a-76dd-45bc-8264-d6c3268bf94f",
+     "reward": 0.0,
+     "content_hash": "b6bfd1d6c3c5157ebb0c5552f646042cb84966e9"
+    },
+    {
+     "task_id": "21",
+     "trial": 3,
+     "sim_id": "65ddeeff-5c79-4fbc-adb9-48d106fa2eb0",
+     "reward": 1.0,
+     "content_hash": "9ea649161228ff308dc639bc922fcbdbd36e5252"
+    },
+    {
+     "task_id": "22",
+     "trial": 0,
+     "sim_id": "16b85794-96b1-4d14-b95d-c8fb51a273c4",
+     "reward": 1.0,
+     "content_hash": "f13db9d309597be07508f88fe2af104e0487a830"
+    },
+    {
+     "task_id": "22",
+     "trial": 1,
+     "sim_id": "93e63380-e745-4595-829d-0cbea108c2e3",
+     "reward": 1.0,
+     "content_hash": "197aaab66df8498b94fff520421d98af3fb87e51"
+    },
+    {
+     "task_id": "22",
+     "trial": 2,
+     "sim_id": "cdfb0f5d-258c-4303-8174-e63613910d6d",
+     "reward": 1.0,
+     "content_hash": "e0c91d8bc1a99ee46112bf4123f8a157af56b592"
+    },
+    {
+     "task_id": "22",
+     "trial": 3,
+     "sim_id": "0568fb39-ac9e-4058-9145-6de519c96811",
+     "reward": 1.0,
+     "content_hash": "170e5c1b7b364788524cf035777d211b4fb98d27"
+    },
+    {
+     "task_id": "24",
+     "trial": 0,
+     "sim_id": "bee10d19-a694-4f34-bc53-a3c2e97a5d74",
+     "reward": 1.0,
+     "content_hash": "e8d4bf6986706ee134802d970d244d60ca0e9254"
+    },
+    {
+     "task_id": "24",
+     "trial": 1,
+     "sim_id": "7559d18d-a7c0-4a72-ab61-6a3d737ad33e",
+     "reward": 1.0,
+     "content_hash": "f16ec6b224d0153ab035f3486bea125268136cc9"
+    },
+    {
+     "task_id": "24",
+     "trial": 2,
+     "sim_id": "5c98ede8-fc31-441a-89ca-917ae0ccd544",
+     "reward": 1.0,
+     "content_hash": "9b4333fee6cf89e4e3742d07a8bf5c9ac9520036"
+    },
+    {
+     "task_id": "24",
+     "trial": 3,
+     "sim_id": "d32a48fe-839d-4ceb-991b-56907953d1a9",
+     "reward": 1.0,
+     "content_hash": "20c185d83b0708c87acde7444b9369211b770e5f"
+    },
+    {
+     "task_id": "28",
+     "trial": 0,
+     "sim_id": "971d5340-728e-47d6-8afe-e39763237de7",
+     "reward": 0.0,
+     "content_hash": "0b0bfc2b73bd9912d4c765ab8717c37d3d76eb40"
+    },
+    {
+     "task_id": "28",
+     "trial": 1,
+     "sim_id": "7cdf3d73-302e-42c2-a874-f00bd6294557",
+     "reward": 0.0,
+     "content_hash": "fe828b881eda7a3f8ca30e0adb0845c9ea1dcb77"
+    },
+    {
+     "task_id": "28",
+     "trial": 2,
+     "sim_id": "7581d83d-73bc-4490-bcb7-9be9c3081992",
+     "reward": 0.0,
+     "content_hash": "9352b5e1bbbe764e6650d8b52f4ef40cd77c49f0"
+    },
+    {
+     "task_id": "28",
+     "trial": 3,
+     "sim_id": "d4693215-ca38-45d8-90c4-6d0d3ac0b223",
+     "reward": 0.0,
+     "content_hash": "608cf4324761d927a27676d7e701e6b74014cebe"
+    },
+    {
+     "task_id": "29",
+     "trial": 0,
+     "sim_id": "f4c8e4a0-3695-490f-8092-1b623ed7eb30",
+     "reward": 1.0,
+     "content_hash": "519792f8d3612adc6f7d1b2bc24d5d5d1fac9a51"
+    },
+    {
+     "task_id": "29",
+     "trial": 1,
+     "sim_id": "0ddc619c-2322-40ad-8453-03b0facd8f68",
+     "reward": 1.0,
+     "content_hash": "0f013d049e2df1543205a3e10709f53e94bb3444"
+    },
+    {
+     "task_id": "29",
+     "trial": 2,
+     "sim_id": "f0f8e2db-c72e-46ce-9dd9-7070fc3abe1b",
+     "reward": 1.0,
+     "content_hash": "26e2b7badf2d4f1e8ceac7dab50f8d85dc77fb68"
+    },
+    {
+     "task_id": "29",
+     "trial": 3,
+     "sim_id": "d0e67233-c82f-44f2-ac23-374ebb0e8cf2",
+     "reward": 1.0,
+     "content_hash": "57ce2428bd84c1c8acf02736ecb30d0dd5c604a5"
+    },
+    {
+     "task_id": "30",
+     "trial": 0,
+     "sim_id": "98ae528d-1bfb-48fa-ad2f-b7fb68ada3f4",
+     "reward": 1.0,
+     "content_hash": "a99129069e8f730838d24e3f22f72da2e90119e6"
+    },
+    {
+     "task_id": "30",
+     "trial": 1,
+     "sim_id": "1818a171-4289-49f2-8566-9c809793e73f",
+     "reward": 1.0,
+     "content_hash": "7869f17c94133dcdfdea36288e393e4b983e3e62"
+    },
+    {
+     "task_id": "30",
+     "trial": 2,
+     "sim_id": "9b4ee7a2-deac-42f9-8ece-1310b4a15a90",
+     "reward": 1.0,
+     "content_hash": "12d6eb385e6a9d18d5804818be7ef9048d1d604a"
+    },
+    {
+     "task_id": "30",
+     "trial": 3,
+     "sim_id": "5fdd74f9-e507-4774-b963-d992a23a72fa",
+     "reward": 1.0,
+     "content_hash": "9d863b1571e4a8efd2c3bbcd6d7d529eaa3d12c0"
+    },
+    {
+     "task_id": "31",
+     "trial": 0,
+     "sim_id": "71f56148-7821-44a6-a8db-aada245585f4",
+     "reward": 1.0,
+     "content_hash": "a5c016358732ae06cebc22ae08f485c900ecd66d"
+    },
+    {
+     "task_id": "31",
+     "trial": 1,
+     "sim_id": "d91304b3-f960-409c-9638-da08f14d0f56",
+     "reward": 1.0,
+     "content_hash": "1fd8834fd0246044e305f780cce35128336b4d6a"
+    },
+    {
+     "task_id": "31",
+     "trial": 2,
+     "sim_id": "818206c3-edc0-424a-9ff4-ca64e27692d2",
+     "reward": 1.0,
+     "content_hash": "a27e4c2f5dd271a94a9bf8ec552939452359a303"
+    },
+    {
+     "task_id": "31",
+     "trial": 3,
+     "sim_id": "d739dbf7-6b86-401f-8ba4-f0cda51c43f3",
+     "reward": 1.0,
+     "content_hash": "ffbaa70240b0fb985ac68f168373efd99b5d0ee0"
+    },
+    {
+     "task_id": "38",
+     "trial": 0,
+     "sim_id": "4caf47bd-1861-44f9-9b77-734d6b9eafbe",
+     "reward": 1.0,
+     "content_hash": "c98c0383be214317a16f5a75226eebb5904d48e0"
+    },
+    {
+     "task_id": "38",
+     "trial": 1,
+     "sim_id": "9cb1fb30-9ce5-4efd-99a8-b67ee69f14a9",
+     "reward": 0.0,
+     "content_hash": "126e4c5b1bfcf58998b17a22197d830635766a50"
+    },
+    {
+     "task_id": "38",
+     "trial": 2,
+     "sim_id": "d227b4bc-5c90-4f56-a176-98babda16eaa",
+     "reward": 1.0,
+     "content_hash": "7ff7ef26d3f93d114c05a032a4f7c15ba0e4bedb"
+    },
+    {
+     "task_id": "38",
+     "trial": 3,
+     "sim_id": "3962f7c8-b69d-4e7b-ae9a-34a2ca193f71",
+     "reward": 1.0,
+     "content_hash": "67018ffa544044fc51680f3c9f0f70b3adb806c3"
+    },
+    {
+     "task_id": "41",
+     "trial": 0,
+     "sim_id": "294fb324-2fc5-4997-a1aa-0d0bd6329763",
+     "reward": 0.0,
+     "content_hash": "4f94cfda47814c667286f34d888fbf0f455a2dfb"
+    },
+    {
+     "task_id": "41",
+     "trial": 1,
+     "sim_id": "0f295ff1-63f4-4759-aa06-62e22b71912d",
+     "reward": 0.0,
+     "content_hash": "913c5d63bdeda5c0f15f1205f8e41d05e00f9616"
+    },
+    {
+     "task_id": "41",
+     "trial": 2,
+     "sim_id": "d66cb88f-57b9-4c3c-9be7-6fe2b9552926",
+     "reward": 0.0,
+     "content_hash": "b19a72feb6e670e7f1c2414caa58a6654b0f2e08"
+    },
+    {
+     "task_id": "41",
+     "trial": 3,
+     "sim_id": "53874645-882e-4fa7-8852-6690b01ca022",
+     "reward": 1.0,
+     "content_hash": "392b7742514cd7e05ee66345606d1ec33b392b85"
+    },
+    {
+     "task_id": "43",
+     "trial": 0,
+     "sim_id": "4ff30a33-2e88-41cc-b976-c76c1c1d467d",
+     "reward": 1.0,
+     "content_hash": "59415c8633ef3f4c1a9bfa43e5a4e6063f7876e9"
+    },
+    {
+     "task_id": "43",
+     "trial": 1,
+     "sim_id": "3cb52555-289d-4e3e-a1d3-72a44937e6a8",
+     "reward": 1.0,
+     "content_hash": "8135ceef91e983b67428c71823a364fd64da332e"
+    },
+    {
+     "task_id": "43",
+     "trial": 2,
+     "sim_id": "f5391465-31ac-49b4-95d6-8e964690b96a",
+     "reward": 0.0,
+     "content_hash": "c83a726b432d7d0e8290cc4590d71ede06ee818d"
+    },
+    {
+     "task_id": "43",
+     "trial": 3,
+     "sim_id": "7a4749fd-c537-403c-b2c6-23ba1c044090",
+     "reward": 0.0,
+     "content_hash": "f629dae01bdad4e9686f4427d09d11d523c1c6bf"
+    },
+    {
+     "task_id": "47",
+     "trial": 0,
+     "sim_id": "f14d0036-8672-48e2-adf9-00ee7766546a",
+     "reward": 0.0,
+     "content_hash": "9d53118ffb06abbda4f0cf2d53ea8406f65e00d0"
+    },
+    {
+     "task_id": "47",
+     "trial": 1,
+     "sim_id": "f9bec99d-6942-4dea-b492-c987bd0c5f0c",
+     "reward": 1.0,
+     "content_hash": "3ee1fa1aad9c378d3564aed06404aa3586a540e3"
+    },
+    {
+     "task_id": "47",
+     "trial": 2,
+     "sim_id": "dded4aba-f467-4401-90ae-12b9f81c5b72",
+     "reward": 1.0,
+     "content_hash": "bf34c3b47d83c188d4faccc973caff6f69f6f9d6"
+    },
+    {
+     "task_id": "47",
+     "trial": 3,
+     "sim_id": "64441c3c-48fb-4a4e-8acf-57989831a9d5",
+     "reward": 1.0,
+     "content_hash": "8f0c182d40059cc806f64f1e6de70c548b9f3b2f"
+    },
+    {
+     "task_id": "48",
+     "trial": 0,
+     "sim_id": "d0161d1a-2148-4a3f-8a20-8f18fae45c80",
+     "reward": 1.0,
+     "content_hash": "5b6c4e801b01a019c95ba6e04db144669357bc3c"
+    },
+    {
+     "task_id": "48",
+     "trial": 1,
+     "sim_id": "1fe2078c-facd-4d44-b2c5-bfc9624a041b",
+     "reward": 1.0,
+     "content_hash": "47845c1fbec9630fd4f62195fb599e29253d799f"
+    },
+    {
+     "task_id": "48",
+     "trial": 2,
+     "sim_id": "63a46051-7718-4996-939b-0e2842d8afd1",
+     "reward": 1.0,
+     "content_hash": "07918af1e0298cb66c4130cb705a3b5bb54d3403"
+    },
+    {
+     "task_id": "48",
+     "trial": 3,
+     "sim_id": "eb60b3d0-4a04-4a0f-af18-2296471e4627",
+     "reward": 1.0,
+     "content_hash": "4dfeccb61231583bb9cb03a7455135f0bc22926c"
+    },
+    {
+     "task_id": "49",
+     "trial": 0,
+     "sim_id": "c9c63e6f-98a0-4d37-b665-d939a2d51ffd",
+     "reward": 1.0,
+     "content_hash": "184dc02b0855bc7c4300dcbe369f3f1d1e71aa8d"
+    },
+    {
+     "task_id": "49",
+     "trial": 1,
+     "sim_id": "e21ddd57-08e5-4fd4-bfe7-59a486e85aa4",
+     "reward": 1.0,
+     "content_hash": "94a281db306883167a4b46883a3a36af34eda440"
+    },
+    {
+     "task_id": "49",
+     "trial": 2,
+     "sim_id": "5904b2fb-7dc8-4029-801d-7fa61585ba02",
+     "reward": 1.0,
+     "content_hash": "c217dacaa254760c4ecfc5c75b3eb78045074fe5"
+    },
+    {
+     "task_id": "49",
+     "trial": 3,
+     "sim_id": "02cd322d-53a0-4446-b0ea-c4b30b24ed12",
+     "reward": 1.0,
+     "content_hash": "1518e357759a38b2902a5ca34b519ee4024f0b90"
+    },
+    {
+     "task_id": "54",
+     "trial": 0,
+     "sim_id": "7152b310-2e29-42d7-8dda-554c4b9ae229",
+     "reward": 1.0,
+     "content_hash": "ca8f97fbee48e39f30f90d7a195d83c5a014fe47"
+    },
+    {
+     "task_id": "54",
+     "trial": 1,
+     "sim_id": "c5cbc037-b61a-48bd-a1c9-4cb10d3ab56c",
+     "reward": 1.0,
+     "content_hash": "e5cc4ddf12bd5921d1022879b427874a386b904a"
+    },
+    {
+     "task_id": "54",
+     "trial": 2,
+     "sim_id": "ed4ad84b-9676-49f6-a339-77aae73ed136",
+     "reward": 1.0,
+     "content_hash": "664533cef4ceb73331ee677d303bb4c11486a526"
+    },
+    {
+     "task_id": "54",
+     "trial": 3,
+     "sim_id": "dcc98ed5-d786-4072-a269-17053ebe707f",
+     "reward": 1.0,
+     "content_hash": "3d15b97b28a3de339288dbf4f27b2836d9510eb7"
+    },
+    {
+     "task_id": "56",
+     "trial": 0,
+     "sim_id": "b8ae6b96-7312-4547-80de-3b12ea70f256",
+     "reward": 0.0,
+     "content_hash": "ff3fcf53cf912ee3f2eebb7f4b0687aa68824d72"
+    },
+    {
+     "task_id": "56",
+     "trial": 1,
+     "sim_id": "5aa6fcde-b054-4937-8b48-43ab963ec3a6",
+     "reward": 0.0,
+     "content_hash": "e2637c14de2054bad56bff015daf36b613bb2d4b"
+    },
+    {
+     "task_id": "56",
+     "trial": 2,
+     "sim_id": "e4744f24-b147-4002-af03-1653b5f314e6",
+     "reward": 1.0,
+     "content_hash": "284e05d423743186b5b8a3406f298d27c841f0e5"
+    },
+    {
+     "task_id": "56",
+     "trial": 3,
+     "sim_id": "b13f96f0-9ec7-46bb-a87c-8f0d24a1c748",
+     "reward": 0.0,
+     "content_hash": "97d922db735e52f6130d409488dbfa4d4e18235a"
+    },
+    {
+     "task_id": "58",
+     "trial": 0,
+     "sim_id": "928d6a32-be59-4706-8867-5e56a167b3a0",
+     "reward": 1.0,
+     "content_hash": "78d91b0731952e5ad17628b936726b1c56e98e51"
+    },
+    {
+     "task_id": "58",
+     "trial": 1,
+     "sim_id": "14e2cfb7-45e5-4832-81bd-ad02c4957fd3",
+     "reward": 1.0,
+     "content_hash": "e426bd3f1e45e2d6a1aa68f3814dc82bf7cf4c0c"
+    },
+    {
+     "task_id": "58",
+     "trial": 2,
+     "sim_id": "42dc2c6f-56e2-406f-a509-e32862131949",
+     "reward": 1.0,
+     "content_hash": "b3186ae916d55c43c562301f8695dd4cd186f77b"
+    },
+    {
+     "task_id": "58",
+     "trial": 3,
+     "sim_id": "c5425efd-f4f2-41ee-ba92-313ba50c8e9c",
+     "reward": 1.0,
+     "content_hash": "86606d4f5f866b31f0aea59734c60f53c28e2e94"
+    },
+    {
+     "task_id": "59",
+     "trial": 0,
+     "sim_id": "d83cb516-59e3-4a55-8991-6729a5e3292b",
+     "reward": 1.0,
+     "content_hash": "71d4b02ac03454b93e31099af965e42d9dd43e75"
+    },
+    {
+     "task_id": "59",
+     "trial": 1,
+     "sim_id": "cf8b9424-1cc8-459a-a283-548ba80eff3d",
+     "reward": 0.0,
+     "content_hash": "4c0860f43e23258eb2b3ca27ad5dc5ef924def2f"
+    },
+    {
+     "task_id": "59",
+     "trial": 2,
+     "sim_id": "715a5a2f-38fc-4dd1-8b5b-b9367955ed3e",
+     "reward": 0.0,
+     "content_hash": "e5b8146086f6999be954fae3095df1b0343655c3"
+    },
+    {
+     "task_id": "59",
+     "trial": 3,
+     "sim_id": "fc2fa2d9-03b9-4f5e-ba33-9c287584859a",
+     "reward": 0.0,
+     "content_hash": "b90e712f99aee53f0003be4ca996977ac1c52ebb"
+    },
+    {
+     "task_id": "61",
+     "trial": 0,
+     "sim_id": "c208253d-707e-4e67-9aba-0865dff8631f",
+     "reward": 1.0,
+     "content_hash": "a7d06eef114ee422b20b6f6d4239dc0349e4ee8f"
+    },
+    {
+     "task_id": "61",
+     "trial": 1,
+     "sim_id": "235c180a-6e05-408d-918e-eeca1823587e",
+     "reward": 1.0,
+     "content_hash": "6672d32bf67c5ca0e80d030177099ab3081ea9fc"
+    },
+    {
+     "task_id": "61",
+     "trial": 2,
+     "sim_id": "0036a08d-a516-43a7-9e77-18c5fb732020",
+     "reward": 1.0,
+     "content_hash": "f0eaef706558658294131e38d0070c0724cc9385"
+    },
+    {
+     "task_id": "61",
+     "trial": 3,
+     "sim_id": "ac76564b-2471-4e23-ac7d-692340ad886f",
+     "reward": 1.0,
+     "content_hash": "aced0e2d337b8cec60640dfc65d23daa56c52303"
+    },
+    {
+     "task_id": "62",
+     "trial": 0,
+     "sim_id": "e07cb097-61d3-43f3-a225-3bd74d74e30e",
+     "reward": 1.0,
+     "content_hash": "ad73e3add625ff8b366deaa86d030c9ca3632dcb"
+    },
+    {
+     "task_id": "62",
+     "trial": 1,
+     "sim_id": "8efedd86-0646-438e-b0bc-150b85df766e",
+     "reward": 1.0,
+     "content_hash": "d93b4daa7ef61770b1057e4f8f1fcf298c93ef39"
+    },
+    {
+     "task_id": "62",
+     "trial": 2,
+     "sim_id": "6d696fc4-dd0e-476f-b6cd-7709ce7e1a4a",
+     "reward": 1.0,
+     "content_hash": "c65b925e6fd50249ff93f36cfd8778afb6bba2d2"
+    },
+    {
+     "task_id": "62",
+     "trial": 3,
+     "sim_id": "20977874-4074-41eb-ad34-e956d6a3e8e2",
+     "reward": 0.0,
+     "content_hash": "2817b1a843a66e9c9b0734cc5b99827b2e75833c"
+    },
+    {
+     "task_id": "65",
+     "trial": 0,
+     "sim_id": "599c16ae-b3f0-45c7-ac63-85c8901546fd",
+     "reward": 1.0,
+     "content_hash": "9faa3657ff25fb60ebee44e0e180f092ce73c8ac"
+    },
+    {
+     "task_id": "65",
+     "trial": 1,
+     "sim_id": "e3c212de-0acc-49fe-8536-0744ffd4b305",
+     "reward": 1.0,
+     "content_hash": "b2fd0f09c3275f8d83bb76f2fd927114560b33af"
+    },
+    {
+     "task_id": "65",
+     "trial": 2,
+     "sim_id": "babe63c3-de98-4534-b258-f67895cacd58",
+     "reward": 1.0,
+     "content_hash": "72583997965a481fc7109bae365c09ade45497a4"
+    },
+    {
+     "task_id": "65",
+     "trial": 3,
+     "sim_id": "7d7c0b0b-b40c-44fb-88fa-6f0a8668be86",
+     "reward": 1.0,
+     "content_hash": "2abef8d38034973e0993902a9b139c716dbc2a27"
+    },
+    {
+     "task_id": "66",
+     "trial": 0,
+     "sim_id": "c742a4ee-e291-4a78-ba68-7d4e25c62ee1",
+     "reward": 1.0,
+     "content_hash": "21326e06809b06ffddbfac91b1b0f4d3a2fbe277"
+    },
+    {
+     "task_id": "66",
+     "trial": 1,
+     "sim_id": "409e0937-d780-4f14-bfaf-56042cf622ab",
+     "reward": 1.0,
+     "content_hash": "6aac53f6d960c09c25d92eacb7744255ec48e69c"
+    },
+    {
+     "task_id": "66",
+     "trial": 2,
+     "sim_id": "4b6e1270-6243-45a4-b26c-e4804a074507",
+     "reward": 1.0,
+     "content_hash": "2cdf32c0cbe4e17dbdb5f84cc51b42489f79c725"
+    },
+    {
+     "task_id": "66",
+     "trial": 3,
+     "sim_id": "c9084244-aba0-4c6d-bb57-136b45ef51f9",
+     "reward": 1.0,
+     "content_hash": "3e113d282b9dad7a6fe492d7b46554ba3a4c8ea2"
+    },
+    {
+     "task_id": "67",
+     "trial": 0,
+     "sim_id": "3871c28c-b6d3-403e-82da-e202614c91e1",
+     "reward": 1.0,
+     "content_hash": "41d9e57ed7f418cc16074cc316259417c015abb2"
+    },
+    {
+     "task_id": "67",
+     "trial": 1,
+     "sim_id": "461ecf37-74b1-455f-84fe-ee3382f7f449",
+     "reward": 1.0,
+     "content_hash": "251d15970bd036d45c2539ac81f343ddf4875273"
+    },
+    {
+     "task_id": "67",
+     "trial": 2,
+     "sim_id": "1b6a1817-469e-4372-b8a5-ccf6e921d20d",
+     "reward": 1.0,
+     "content_hash": "c0eb22238afa5c98a771b4494aba318241158696"
+    },
+    {
+     "task_id": "67",
+     "trial": 3,
+     "sim_id": "8e60509f-9ba4-4586-9b9e-7f4bb8c8859f",
+     "reward": 1.0,
+     "content_hash": "09c5401bfc29bffe5a9993dbdeb696e1ff800303"
+    },
+    {
+     "task_id": "73",
+     "trial": 0,
+     "sim_id": "2c85c3f8-cdfb-4c08-ad8a-74be2700172a",
+     "reward": 1.0,
+     "content_hash": "cb609717f9fab8a014c94e9ef22d22f46a170534"
+    },
+    {
+     "task_id": "73",
+     "trial": 1,
+     "sim_id": "9e58d486-ec24-459c-8d2c-1a798db330e4",
+     "reward": 1.0,
+     "content_hash": "54cfd25c056073773dd900eff5aaf9d4ddc7b3df"
+    },
+    {
+     "task_id": "73",
+     "trial": 2,
+     "sim_id": "631840dc-1322-455b-bf4f-32e80790c232",
+     "reward": 1.0,
+     "content_hash": "521578483e78c29339c850e7bef174f685b3514f"
+    },
+    {
+     "task_id": "73",
+     "trial": 3,
+     "sim_id": "afc79337-ec2d-431c-8375-da6c44a5d42f",
+     "reward": 1.0,
+     "content_hash": "f9e6b4aa497806654110fd07bfec1d65e692ee60"
+    },
+    {
+     "task_id": "74",
+     "trial": 0,
+     "sim_id": "d8b9ea36-41e6-4a26-8ba8-d6a0cb4f3e3f",
+     "reward": 1.0,
+     "content_hash": "6327822a52bce26ebf7880484672ecff2dce3056"
+    },
+    {
+     "task_id": "74",
+     "trial": 1,
+     "sim_id": "d545630d-72b4-447b-b32f-22e7dd039dd2",
+     "reward": 0.0,
+     "content_hash": "43ea544204dedf526a2cbd72893dfcf0132f579a"
+    },
+    {
+     "task_id": "74",
+     "trial": 2,
+     "sim_id": "f227a2c2-ce83-496f-8da2-f7f5dbe9d5e0",
+     "reward": 0.0,
+     "content_hash": "73f6b38cd919a2da1c7f1c24723d43da69f39ae2"
+    },
+    {
+     "task_id": "74",
+     "trial": 3,
+     "sim_id": "b048da6f-5a21-4001-8074-9a749c2a913d",
+     "reward": 1.0,
+     "content_hash": "cdf8f3e4d1528151e7bcdbad15c0545c55da8baa"
+    },
+    {
+     "task_id": "75",
+     "trial": 0,
+     "sim_id": "226e6b30-7362-4f8a-b4ce-537b23f727a5",
+     "reward": 1.0,
+     "content_hash": "c6ffbb6ffde8efaf7b779a80dfa7b45f487c2e92"
+    },
+    {
+     "task_id": "75",
+     "trial": 1,
+     "sim_id": "87cad821-94be-447d-98c0-f4b7172e8e5e",
+     "reward": 1.0,
+     "content_hash": "d898bd964445a8764dc6c97a25ee060970858207"
+    },
+    {
+     "task_id": "75",
+     "trial": 2,
+     "sim_id": "415be893-f031-4baf-b180-fe34f936d0e0",
+     "reward": 1.0,
+     "content_hash": "01b8a56931e8b43dbd90d971ef93c8a06c5b75bf"
+    },
+    {
+     "task_id": "75",
+     "trial": 3,
+     "sim_id": "15da9b79-c631-4bfc-9e86-b09f94970f85",
+     "reward": 1.0,
+     "content_hash": "9d4612bc1a626d542a5bd014cc6ca4fc0e775f78"
+    },
+    {
+     "task_id": "81",
+     "trial": 0,
+     "sim_id": "35ad21f5-dd4b-4361-8df3-785e228d7195",
+     "reward": 1.0,
+     "content_hash": "06bd4e7b443f8a2ecf3a9bfcc43c160497638411"
+    },
+    {
+     "task_id": "81",
+     "trial": 1,
+     "sim_id": "eee9dd18-4376-458a-b26c-60e7fb987ce2",
+     "reward": 1.0,
+     "content_hash": "738b71a3f81649d172e6b50fcfbbf4d1b782063f"
+    },
+    {
+     "task_id": "81",
+     "trial": 2,
+     "sim_id": "24ab06f2-2220-482c-9a45-82b3a31614a2",
+     "reward": 1.0,
+     "content_hash": "dad812aa8be9b62ca7bfecb409402730976cd999"
+    },
+    {
+     "task_id": "81",
+     "trial": 3,
+     "sim_id": "5ded8f70-24e3-4eba-9e2f-9c291bc9f475",
+     "reward": 1.0,
+     "content_hash": "574a08e55f4061adef5fb34dc7e9c643ced0af2c"
+    },
+    {
+     "task_id": "82",
+     "trial": 0,
+     "sim_id": "6877dd1b-f832-44d9-a17f-eb63369e9a0a",
+     "reward": 0.0,
+     "content_hash": "a533a2b6014510f3728c327d2a3ed246c2bc914f"
+    },
+    {
+     "task_id": "82",
+     "trial": 1,
+     "sim_id": "f02df3e7-3841-4f20-a2bb-30a4848cd15d",
+     "reward": 0.0,
+     "content_hash": "87cb11fbd887e1b02c0c71c6634286bc50ff5083"
+    },
+    {
+     "task_id": "82",
+     "trial": 2,
+     "sim_id": "2aa6b060-4c63-45a2-944c-d04c48631e5d",
+     "reward": 0.0,
+     "content_hash": "3e803af29959c9899d7e395ff569f42070e6c9ff"
+    },
+    {
+     "task_id": "82",
+     "trial": 3,
+     "sim_id": "b1686bf5-5950-4f57-973d-0e64ac4572aa",
+     "reward": 0.0,
+     "content_hash": "2964918e388e4aaa156a1d0f49d438cc8c8f9efa"
+    },
+    {
+     "task_id": "83",
+     "trial": 0,
+     "sim_id": "4778e07d-d08c-462e-9d30-b70f6ba2ad16",
+     "reward": 1.0,
+     "content_hash": "e530c74073774e99dd108f945c0d250e5b69b023"
+    },
+    {
+     "task_id": "83",
+     "trial": 1,
+     "sim_id": "ebb37cf4-33c9-4283-880d-baaee87c593b",
+     "reward": 1.0,
+     "content_hash": "a1b97ec5861bc6b648fc6f7937dcf28ba912828e"
+    },
+    {
+     "task_id": "83",
+     "trial": 2,
+     "sim_id": "f001db17-4e36-4342-9f52-5e5f09085ed8",
+     "reward": 1.0,
+     "content_hash": "7a5533c0284c0601b9de0a90c12665c4513588fa"
+    },
+    {
+     "task_id": "83",
+     "trial": 3,
+     "sim_id": "038cc04e-b05d-42be-83b0-50ccb316ba86",
+     "reward": 1.0,
+     "content_hash": "ac2203864c4c43d8a75d81cca04eab8d4d7f0203"
+    },
+    {
+     "task_id": "85",
+     "trial": 0,
+     "sim_id": "87aa7b2f-4a70-4935-b061-2ad428502312",
+     "reward": 1.0,
+     "content_hash": "87edc8179c2d79787e2ee8b4259175c1f3596956"
+    },
+    {
+     "task_id": "85",
+     "trial": 1,
+     "sim_id": "76577d01-1a55-4167-9747-198bdfdc79aa",
+     "reward": 1.0,
+     "content_hash": "25ed0b515ec21f4623b49c46f4373352fb9aa300"
+    },
+    {
+     "task_id": "85",
+     "trial": 2,
+     "sim_id": "a5591510-2b9c-47d4-97f4-8149bd696d1b",
+     "reward": 1.0,
+     "content_hash": "adfa07005f54833fa02a01d23f3c4c89e5cdc82f"
+    },
+    {
+     "task_id": "85",
+     "trial": 3,
+     "sim_id": "67b9c512-9e81-4a39-8bc8-5926efe8a232",
+     "reward": 1.0,
+     "content_hash": "ab005c0d832c5e3f636bb65d6bdb41715ce7122d"
+    },
+    {
+     "task_id": "86",
+     "trial": 0,
+     "sim_id": "af564ee6-4ded-47eb-858b-2054026a7005",
+     "reward": 1.0,
+     "content_hash": "c4ed65aa964c122fe13465ebf1b5e1394931f5e5"
+    },
+    {
+     "task_id": "86",
+     "trial": 1,
+     "sim_id": "c490c761-c4cb-4f1d-b073-f936d29458ba",
+     "reward": 1.0,
+     "content_hash": "e06c380d657c3673dbafd3f8c1e23fed14d2b7eb"
+    },
+    {
+     "task_id": "86",
+     "trial": 2,
+     "sim_id": "999f0178-2200-471f-b50c-93799108d36c",
+     "reward": 1.0,
+     "content_hash": "826abf0aea400b5fec1f5180c3a04953a05ec2ba"
+    },
+    {
+     "task_id": "86",
+     "trial": 3,
+     "sim_id": "46ee583e-dc18-439e-a443-44564b7366d7",
+     "reward": 1.0,
+     "content_hash": "5004f84f62c2ece6a2e7323a0966c9ff92e53ef3"
+    },
+    {
+     "task_id": "89",
+     "trial": 0,
+     "sim_id": "12cbfa71-5170-4b39-b37d-1f15f2979fa0",
+     "reward": 1.0,
+     "content_hash": "6d99e6820c4ef2bfccffedf305262d03cf09f9aa"
+    },
+    {
+     "task_id": "89",
+     "trial": 1,
+     "sim_id": "d6d190cd-b709-468f-a062-4547d1e7647a",
+     "reward": 1.0,
+     "content_hash": "4214ffa7b366c3486bd74ac1b63ea3067e9d4f9a"
+    },
+    {
+     "task_id": "89",
+     "trial": 2,
+     "sim_id": "e9fb2c50-3f4d-4ad9-80f6-238f9c8faba8",
+     "reward": 1.0,
+     "content_hash": "fcd89e7b8441756f602a8d76a43561f9f210f717"
+    },
+    {
+     "task_id": "89",
+     "trial": 3,
+     "sim_id": "b09d1187-50f2-41f7-9861-cfe328d401cf",
+     "reward": 1.0,
+     "content_hash": "4175478c681215a0a5bf4bb9918f82fbb52be66b"
+    },
+    {
+     "task_id": "90",
+     "trial": 0,
+     "sim_id": "55f5ae82-d103-4bcc-bf49-e0c45d224de0",
+     "reward": 1.0,
+     "content_hash": "44e78e90485bc9a77fda471f68acfaa571970755"
+    },
+    {
+     "task_id": "90",
+     "trial": 1,
+     "sim_id": "07e02946-3eef-459a-9e43-9828c4064908",
+     "reward": 1.0,
+     "content_hash": "741a733236e10d4dc4f94513b91db213724a642f"
+    },
+    {
+     "task_id": "90",
+     "trial": 2,
+     "sim_id": "82bbc826-af6d-4895-bc73-915fa4d1f3da",
+     "reward": 1.0,
+     "content_hash": "c231adee25e8fd8d2e4043a673c4ea949d0cb303"
+    },
+    {
+     "task_id": "90",
+     "trial": 3,
+     "sim_id": "da27f1a3-e77b-408e-9135-9808a18dfa66",
+     "reward": 1.0,
+     "content_hash": "1b348fc627ab6e2cbaa4ed3dedd5152f86eb18a5"
+    },
+    {
+     "task_id": "91",
+     "trial": 0,
+     "sim_id": "f0970bf2-5ea6-431c-bf76-e7fff99d38e4",
+     "reward": 1.0,
+     "content_hash": "f9c4fcab2fd05d24b48d46cc2c6770456705ef9c"
+    },
+    {
+     "task_id": "91",
+     "trial": 1,
+     "sim_id": "94a9d1df-13cc-4d96-83e9-baa7f3671eda",
+     "reward": 1.0,
+     "content_hash": "da4e993cbdc9546f68a43f0b835fbed54de3763e"
+    },
+    {
+     "task_id": "91",
+     "trial": 2,
+     "sim_id": "cb75be22-9cb4-4c65-8671-4bccf57caa25",
+     "reward": 1.0,
+     "content_hash": "1d8513ecff25d7e6efc481888ac8d2b89909d304"
+    },
+    {
+     "task_id": "91",
+     "trial": 3,
+     "sim_id": "55d30f40-9bee-4eef-8688-f9c4f01157e9",
+     "reward": 0.0,
+     "content_hash": "c8f3702de962d9e5a59c45075b1802220a846360"
+    },
+    {
+     "task_id": "92",
+     "trial": 0,
+     "sim_id": "1039fe8a-ca54-4390-92a0-6a529d6f436b",
+     "reward": 1.0,
+     "content_hash": "8ea73358c741e485fe8d4a74a38e393422caf8f4"
+    },
+    {
+     "task_id": "92",
+     "trial": 1,
+     "sim_id": "76920bc8-81f6-456b-a0e4-3f582a077cd2",
+     "reward": 1.0,
+     "content_hash": "bf78e0cb7c58dea4ce11655fd1415264b123c5a2"
+    },
+    {
+     "task_id": "92",
+     "trial": 2,
+     "sim_id": "52512030-cd42-4476-a505-85de28e6d6db",
+     "reward": 1.0,
+     "content_hash": "d8fd0f54362546f9246f1f3cded8a26de234376e"
+    },
+    {
+     "task_id": "92",
+     "trial": 3,
+     "sim_id": "8decae17-db26-4e02-8bc1-a24736db536b",
+     "reward": 0.0,
+     "content_hash": "f9fcf69fded13c4de4c6a2b34fa851ca776786bd"
+    },
+    {
+     "task_id": "93",
+     "trial": 0,
+     "sim_id": "7307d540-6d84-4fa1-ad43-adfd3bb1e7f4",
+     "reward": 1.0,
+     "content_hash": "4982f34c477d56d0f10926a4d722a64e123c6dac"
+    },
+    {
+     "task_id": "93",
+     "trial": 1,
+     "sim_id": "b65802c6-2533-48e6-a8d4-2d332c3f93b0",
+     "reward": 1.0,
+     "content_hash": "dedf62ef212434f5a5a79bb8b01b27c12b848469"
+    },
+    {
+     "task_id": "93",
+     "trial": 2,
+     "sim_id": "a36a7875-b59b-498d-9083-c636ee39fe0e",
+     "reward": 1.0,
+     "content_hash": "5ce06173ed888e534bc835583ed3f92bac77c142"
+    },
+    {
+     "task_id": "93",
+     "trial": 3,
+     "sim_id": "2b2092f6-c3f1-4605-96ad-11f01fcd8936",
+     "reward": 1.0,
+     "content_hash": "b0073adf4d5a5b6fce763869165053f08e1db16d"
+    },
+    {
+     "task_id": "94",
+     "trial": 0,
+     "sim_id": "d59809ae-c2b3-48e9-abc9-cd459aaf21f3",
+     "reward": 1.0,
+     "content_hash": "9ae36632590f35fd088b035762ff46b59590132b"
+    },
+    {
+     "task_id": "94",
+     "trial": 1,
+     "sim_id": "cd42ad87-9e7a-414e-89e6-2b8dfd78e355",
+     "reward": 1.0,
+     "content_hash": "da003f7b5508190bc78175e31a9cf87ac6db0ed4"
+    },
+    {
+     "task_id": "94",
+     "trial": 2,
+     "sim_id": "83eba59e-68fd-4b0d-904c-a469468f4bb3",
+     "reward": 0.0,
+     "content_hash": "75afd4e253ba9c0f5e9502159f1c33fa34104102"
+    },
+    {
+     "task_id": "94",
+     "trial": 3,
+     "sim_id": "bb0816a7-0376-45c1-8754-980e83797a9a",
+     "reward": 1.0,
+     "content_hash": "8aa46965580cad21cc4e95cc207c65732e8dc8ed"
+    },
+    {
+     "task_id": "95",
+     "trial": 0,
+     "sim_id": "3c57e816-c20c-4357-8687-36875e871b9d",
+     "reward": 0.0,
+     "content_hash": "2fb3b2efff10316656b36ba137bb4e74706c7d92"
+    },
+    {
+     "task_id": "95",
+     "trial": 1,
+     "sim_id": "1da4de77-1624-452a-ae00-4ce32deab07f",
+     "reward": 0.0,
+     "content_hash": "bd92c8e7e3bbbaf8ce59bd7876b3888d3729daf5"
+    },
+    {
+     "task_id": "95",
+     "trial": 2,
+     "sim_id": "6e9f99c1-ce22-4d11-8070-dea4c590e65d",
+     "reward": 0.0,
+     "content_hash": "3e4fb2817699a8bbaf59efcc17f5e51b014de7e2"
+    },
+    {
+     "task_id": "95",
+     "trial": 3,
+     "sim_id": "027ee1c4-0e4d-4f8b-bf00-8c8548f54322",
+     "reward": 1.0,
+     "content_hash": "fa0df288d922d50b66de5707de88ff490a5232f5"
+    },
+    {
+     "task_id": "96",
+     "trial": 0,
+     "sim_id": "dbbd67bb-a0e2-497a-8837-8d5dfd9596e6",
+     "reward": 1.0,
+     "content_hash": "0ff5f6db45005375f3952d46034ec559e2c39588"
+    },
+    {
+     "task_id": "96",
+     "trial": 1,
+     "sim_id": "0a45806a-0967-4698-b603-8c1dc6ea1e16",
+     "reward": 1.0,
+     "content_hash": "551b9ab1106f373edd376850040bb3108d80d2ab"
+    },
+    {
+     "task_id": "96",
+     "trial": 2,
+     "sim_id": "78fa93b3-134f-4a4b-8cc2-7f0b51260385",
+     "reward": 1.0,
+     "content_hash": "b0459bc29be67965bb77f556c700074604443b70"
+    },
+    {
+     "task_id": "96",
+     "trial": 3,
+     "sim_id": "6eef38fe-8bfe-4f57-a2a5-1b86c7d513c3",
+     "reward": 1.0,
+     "content_hash": "2c27d786ea7120f6221a7395bdc2a70202fa57c3"
+    },
+    {
+     "task_id": "97",
+     "trial": 0,
+     "sim_id": "9a5fda53-2b27-4edc-8d2d-49883e5e8c02",
+     "reward": 1.0,
+     "content_hash": "c1abcfed20ba29d8790d64bb87986ae7d4fd6f12"
+    },
+    {
+     "task_id": "97",
+     "trial": 1,
+     "sim_id": "5d3377c9-8fff-41be-ad1b-894a4fdacf2a",
+     "reward": 1.0,
+     "content_hash": "2ca25d9efc586675815d6a983f9c2eeaffcdee25"
+    },
+    {
+     "task_id": "97",
+     "trial": 2,
+     "sim_id": "b3208d12-b571-4cf3-9563-095bf8c02631",
+     "reward": 1.0,
+     "content_hash": "5bd1ba3da1ca727d5f37ffd22845656788a193e1"
+    },
+    {
+     "task_id": "97",
+     "trial": 3,
+     "sim_id": "ae4625ff-6392-40ed-8abf-463e059aa657",
+     "reward": 1.0,
+     "content_hash": "3a73554400fd4044c29706abb7ae8c9a970c37fd"
+    },
+    {
+     "task_id": "98",
+     "trial": 0,
+     "sim_id": "e06b2102-791b-40cd-80e6-1baf27cb21e3",
+     "reward": 1.0,
+     "content_hash": "0641b1a5906167fa8595cb771a09290e24237079"
+    },
+    {
+     "task_id": "98",
+     "trial": 1,
+     "sim_id": "596a85c0-52b9-4c55-9aed-829de7fa773a",
+     "reward": 0.0,
+     "content_hash": "7ecd46de3bccdec027b90acfee324c28a3295006"
+    },
+    {
+     "task_id": "98",
+     "trial": 2,
+     "sim_id": "9859a964-eaa4-4cbf-b350-ff0b096fed22",
+     "reward": 1.0,
+     "content_hash": "b57fe2dc82739b04c6c18cb09fdbeccfa7e74928"
+    },
+    {
+     "task_id": "98",
+     "trial": 3,
+     "sim_id": "0d5c8b0c-6f7a-432b-88b0-aa771fff8561",
+     "reward": 1.0,
+     "content_hash": "abb0874724beccaea5fae354f7a6e4c743af2469"
+    },
+    {
+     "task_id": "99",
+     "trial": 0,
+     "sim_id": "98909317-57e9-467f-ad64-93e5131aefd4",
+     "reward": 0.0,
+     "content_hash": "65e4f9e66cc1d14c8c913585efba8a2f6e5ed0b8"
+    },
+    {
+     "task_id": "99",
+     "trial": 1,
+     "sim_id": "eefed9d6-88f2-41d3-b4f8-febd428a5e26",
+     "reward": 0.0,
+     "content_hash": "ba38fe84c3abea3227ffd2a8b4b8e49f9655648f"
+    },
+    {
+     "task_id": "99",
+     "trial": 2,
+     "sim_id": "4a5caf23-be5a-450c-8363-21da4bdee750",
+     "reward": 0.0,
+     "content_hash": "267f377fbeadc86dbf12d1190e079155762a775f"
+    },
+    {
+     "task_id": "99",
+     "trial": 3,
+     "sim_id": "f9ace1fa-fbdb-42c4-b74e-d4ce024f266b",
+     "reward": 0.0,
+     "content_hash": "ad9f64f14528c9fd36f8ad8e073582b90ca33b98"
+    },
+    {
+     "task_id": "100",
+     "trial": 0,
+     "sim_id": "8f2ea0b2-422f-4d8c-a4eb-e95451d9cf94",
+     "reward": 0.0,
+     "content_hash": "d8e23dd06fd2800fd70d8a4024642d2e9f550bfd"
+    },
+    {
+     "task_id": "100",
+     "trial": 1,
+     "sim_id": "2de45bd4-52e5-4d70-a3ec-7bb7d62dfc41",
+     "reward": 0.0,
+     "content_hash": "39fce7579867a075a99b3c19f678f13d6cdfbc4f"
+    },
+    {
+     "task_id": "100",
+     "trial": 2,
+     "sim_id": "8ff1aa08-8ccb-4cf6-a773-5a4a8dd21d35",
+     "reward": 0.0,
+     "content_hash": "75e8ae4c062c6bcf3c617c4cbc215a884ab7745e"
+    },
+    {
+     "task_id": "100",
+     "trial": 3,
+     "sim_id": "be8a99fc-7e93-41ae-8439-b70d50e3d6dc",
+     "reward": 1.0,
+     "content_hash": "d7ec4ee6ece7bf52bc39e0016f17be2d8e33c850"
+    },
+    {
+     "task_id": "104",
+     "trial": 0,
+     "sim_id": "ac33a651-da63-45bc-b85e-1477af0630c1",
+     "reward": 0.0,
+     "content_hash": "0816cc64f2801d7a6f3de0ec0d5d4adda04d8c7c"
+    },
+    {
+     "task_id": "104",
+     "trial": 1,
+     "sim_id": "138f4638-21e6-4761-9e9c-535b6183d5dc",
+     "reward": 1.0,
+     "content_hash": "612d627f5c66fb94a3d7739016f2282b1948dff2"
+    },
+    {
+     "task_id": "104",
+     "trial": 2,
+     "sim_id": "53885d0b-8ae4-4d18-8087-30b3db4681a5",
+     "reward": 1.0,
+     "content_hash": "fd2f0d342e6fc353b28c3990d379e196475c43f5"
+    },
+    {
+     "task_id": "104",
+     "trial": 3,
+     "sim_id": "72887f1b-a4a8-43d7-8bcf-9c636786f9ce",
+     "reward": 1.0,
+     "content_hash": "fb2bca9cbc055f121370bebdaa35012c44679281"
+    },
+    {
+     "task_id": "106",
+     "trial": 0,
+     "sim_id": "c3ca3351-b427-4682-bdff-da491f9b5b22",
+     "reward": 0.0,
+     "content_hash": "e6b223b2f42cba272e8460713cd57957c65fbaa1"
+    },
+    {
+     "task_id": "106",
+     "trial": 1,
+     "sim_id": "ebe8a6f4-29f0-4643-9174-60fc49735d8d",
+     "reward": 1.0,
+     "content_hash": "e453bfe167852c300ed2320ff13b477f53e8e9ae"
+    },
+    {
+     "task_id": "106",
+     "trial": 2,
+     "sim_id": "08ec1b16-5db5-4644-afbc-5f45cb99f7c7",
+     "reward": 1.0,
+     "content_hash": "67107a920b7604c0f54e135c0adc349d9f71f0a9"
+    },
+    {
+     "task_id": "106",
+     "trial": 3,
+     "sim_id": "59d2ca49-2b8b-4884-9eb6-ee663f191c57",
+     "reward": 1.0,
+     "content_hash": "c1d46689ea4efa053aece93e2de5fb50c1bd18f3"
+    },
+    {
+     "task_id": "107",
+     "trial": 0,
+     "sim_id": "19a2e216-5898-437b-a55d-599ec551bf65",
+     "reward": 1.0,
+     "content_hash": "2e2d7ebce6d4a88ec68b2e38b7317da90c0ebb5f"
+    },
+    {
+     "task_id": "107",
+     "trial": 1,
+     "sim_id": "69279305-faf2-411f-b102-31ddaa763bb2",
+     "reward": 0.0,
+     "content_hash": "4266d84b029306cd19d6fd82bdfd22b04895696d"
+    },
+    {
+     "task_id": "107",
+     "trial": 2,
+     "sim_id": "bf4d13ae-2eb3-4826-a894-23a9e6dd5cd2",
+     "reward": 1.0,
+     "content_hash": "9507535cfb517b6e2173488f425869d41357a92b"
+    },
+    {
+     "task_id": "107",
+     "trial": 3,
+     "sim_id": "62973f89-40f4-4f5e-9f93-7deba34d83c5",
+     "reward": 0.0,
+     "content_hash": "489947031a79d93be07457404a1696f929f57c9a"
+    },
+    {
+     "task_id": "108",
+     "trial": 0,
+     "sim_id": "2050ca6e-b44c-4eb9-bf31-bd7149f6100b",
+     "reward": 1.0,
+     "content_hash": "4ec93e19b5e8af6af9645b3bbc14bfde87242c73"
+    },
+    {
+     "task_id": "108",
+     "trial": 1,
+     "sim_id": "ec2b1276-c4b9-46e0-877e-502ec201491a",
+     "reward": 1.0,
+     "content_hash": "a3051907a100be695dd5145fe9f46aeb75a2688d"
+    },
+    {
+     "task_id": "108",
+     "trial": 2,
+     "sim_id": "6fcb2481-3bc4-4ffc-9fc3-42e509de2f48",
+     "reward": 1.0,
+     "content_hash": "191039084cb76f989c459313773c07ce472822fc"
+    },
+    {
+     "task_id": "108",
+     "trial": 3,
+     "sim_id": "8243cd0f-23d7-423e-8642-f2bb16464deb",
+     "reward": 1.0,
+     "content_hash": "5bc11eea480ad18ffdb2846ab4963dc06db8a145"
+    },
+    {
+     "task_id": "110",
+     "trial": 0,
+     "sim_id": "fbdae47d-2aec-4544-8e63-154b21c42a2f",
+     "reward": 0.0,
+     "content_hash": "c1ea13d1ed926a70cd052748b112ecf0af7d0818"
+    },
+    {
+     "task_id": "110",
+     "trial": 1,
+     "sim_id": "511b0ecc-0092-4bc7-aaef-309cc0078b1d",
+     "reward": 0.0,
+     "content_hash": "9c89d67abcecf5bbd7f2548a42e69a0eb2683ddc"
+    },
+    {
+     "task_id": "110",
+     "trial": 2,
+     "sim_id": "f5885092-55de-4b23-8caa-7bb69944d8d0",
+     "reward": 1.0,
+     "content_hash": "39961c720b7e7002f6e0d05906580ca44d85de19"
+    },
+    {
+     "task_id": "110",
+     "trial": 3,
+     "sim_id": "6a750852-2de3-404d-a5ab-81ec1cb932c7",
+     "reward": 0.0,
+     "content_hash": "34c3bec98d14ef8eba455aa2f046817cb79d3de7"
+    },
+    {
+     "task_id": "111",
+     "trial": 0,
+     "sim_id": "0ef7a3e6-6564-4530-b584-898cc8f67ec8",
+     "reward": 1.0,
+     "content_hash": "6c2f9929da6ccd6faeaf4b59eec4e04708ff212a"
+    },
+    {
+     "task_id": "111",
+     "trial": 1,
+     "sim_id": "a800d7ba-9342-4040-91f4-eb646bc07c21",
+     "reward": 1.0,
+     "content_hash": "2621100b9e97e95f406d69cec2b229de8ec70f52"
+    },
+    {
+     "task_id": "111",
+     "trial": 2,
+     "sim_id": "491ccc8e-28bd-45f6-9183-924179e364c6",
+     "reward": 1.0,
+     "content_hash": "ae680c8a6f7b8051be848078fda332d2af447525"
+    },
+    {
+     "task_id": "111",
+     "trial": 3,
+     "sim_id": "85b2b12b-8a21-4623-817d-d2799054e92b",
+     "reward": 0.0,
+     "content_hash": "4b09bb7199e5c91af20171d928966cac72923ab6"
+    },
+    {
+     "task_id": "112",
+     "trial": 0,
+     "sim_id": "16b4abd5-8e64-48b6-afd6-ece9ace653ee",
+     "reward": 0.0,
+     "content_hash": "1e22c17515ba7e5d0e80e29c333fc65b2fea7f7b"
+    },
+    {
+     "task_id": "112",
+     "trial": 1,
+     "sim_id": "1b9848b5-e64d-4af8-8bc3-199ad3019f2a",
+     "reward": 1.0,
+     "content_hash": "53d360135448137e5b09c4fdb124416cd9c470e6"
+    },
+    {
+     "task_id": "112",
+     "trial": 2,
+     "sim_id": "e475e217-aef0-4dc1-903b-f5a522cbc9af",
+     "reward": 0.0,
+     "content_hash": "64f6748c63a0bec96dd8f8c249fdbe219ef1e5f2"
+    },
+    {
+     "task_id": "112",
+     "trial": 3,
+     "sim_id": "42cf6a75-8433-4f9d-9a6f-28b07da40b3d",
+     "reward": 0.0,
+     "content_hash": "bd4a8191f1f764c15a81ed64821f6aecca7b4e66"
+    }
+   ]
+  }
+ }
+}
