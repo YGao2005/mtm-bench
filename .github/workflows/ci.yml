@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -e ".[dev]"
+      - run: ruff check
+      - run: python -m pytest -q
+      # The full paper reproduction is offline (frozen caches, shipped data, sha256-verified) and
+      # self-checking — 13 assertions against the paper's published numbers, non-zero on mismatch.
+      - run: python scripts/reproduce_paper.py

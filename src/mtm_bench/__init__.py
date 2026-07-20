@@ -57,7 +57,7 @@ from .schema import (
     Trace,
 )
 from .stats import wilson_ci
-from .tau2_loader import load_tau2_results
+from .tau2_loader import held_out_task_ids, load_tau2_results
 
 __all__ = [
     # trace schema (vendored, self-contained)
@@ -78,5 +78,5 @@ __all__ = [
     "apb_judge_step_graders", "apb_judge_outcome_predictors", "apb_judge_localizers",
     "tau2_cached_outcome_predictors",
     # data loading + stats
-    "load_tau2_results", "wilson_ci",
+    "load_tau2_results", "held_out_task_ids", "wilson_ci",
 ]

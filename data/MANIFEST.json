@@ -1,7 +1,15 @@
 {
+  "external/README.md": {
+    "sha256": "2e8d03e50dc811688db4c806758ebf4f3f0e8b6cb10757ff7eaa682ec6da78f8",
+    "bytes": 607
+  },
   "tau2/census_labels.jsonl": {
     "sha256": "8e8c33a2a1259eccdc123fda8d284d7a8c792fd1b532991ebd9ee234bc3aca78",
     "bytes": 84457
+  },
+  "tau2/eval_manifest.json": {
+    "sha256": "1f2ce12a0648c9e976a9f11d56c60160bde0f34d6a40be9700144b76444f4ebd",
+    "bytes": 64882
   },
   "tau2/judge_caches/broad_prompt_diagnostic.json": {
     "sha256": "1fcd5dfa67cff9228fb65bad08024152c7b30ad08ea31a737351b1f220295333",
@@ -27,12 +35,36 @@
     "sha256": "04ca08b06bb9794946db0e0930e73e7851bfebdff56343ebca8e0f5256613bb6",
     "bytes": 38784
   },
+  "tau2/traces_airline_claude37sonnet.json.gz": {
+    "sha256": "a5410785415068235fa022f55dccd551588a101469c1d0d5ad39e06562cddfd2",
+    "bytes": 990091
+  },
   "tau2/traces_airline_gpt41.json.gz": {
     "sha256": "ed3856c506c313f5da58f46094c9e9ab9ab00674be75484c2aa56009228edf8d",
     "bytes": 842612
   },
+  "tau2/traces_airline_gpt41mini.json.gz": {
+    "sha256": "97f5ad7737d06fccf3ac3c4169acfff347f0696b87ba07efbe46ba19013dc766",
+    "bytes": 865405
+  },
+  "tau2/traces_airline_o4mini.json.gz": {
+    "sha256": "7fd238a07567dca9ec7a2ccb184cdd6d2628ee95c016ff9a7b122f482dc84bf2",
+    "bytes": 698007
+  },
+  "tau2/traces_retail_claude37sonnet.json.gz": {
+    "sha256": "040b963fb4da4650b22a025d04381e262e6c359e766b4736edb4aae09e985529",
+    "bytes": 2369216
+  },
   "tau2/traces_retail_gpt41.json.gz": {
     "sha256": "cac70fbb9b96aba66560d3cefecacdc747a3424fcc1f3737ea574f6c2978a3ba",
     "bytes": 2193417
+  },
+  "tau2/traces_retail_gpt41mini.json.gz": {
+    "sha256": "3d4f24068b8c184e794a4f5c05408dddaefb5035564e53bba6493605a6058419",
+    "bytes": 2246969
+  },
+  "tau2/traces_retail_o4mini.json.gz": {
+    "sha256": "418bbe052059204b5d5f4416a7a595dad6ee898dfe99284126ad9c4f772715ae",
+    "bytes": 2063605
   }
 }
