@@ -65,6 +65,27 @@ are not redistributed here — see `data/external/`):
 mtm-bench apb-leaderboard --apb-dir /path/to/agentprocessbench --json
 ```
 
+## Shipped baseline numbers
+
+Numbers from the shipped frozen caches (reproducible offline via `python scripts/reproduce_paper.py`):
+
+**τ² outcome axis** (the paper's depth-leg cells, two numbers per cell):
+
+| Model | Domain | Split | Recall (↑) | Fire-on-clean (↓) | Judge |
+|---|---|---|---|---|---|
+| gpt-4.1 | airline | test | 0.88 | 0.48 | broad_prompt |
+| gpt-4.1 | retail | test | 0.73 | 0.49 | broad_prompt |
+
+The other three model cells (gpt-4.1-mini, o4-mini, Claude 3.7 Sonnet) ship oracle-verified gold
+only (no frozen judge cache yet) — seat your own detector on them via `mtm-bench tau2-leaderboard`.
+
+**Truth-clean decomposition** (n=40 human-labeled airline census, judge held fixed):
+
+| Metric | Value | 95% CI |
+|---|---|---|
+| Genuine over-flag rate | 9/27 = 0.33 | [0.19, 0.52] |
+| Real catch rate | 4/9 = 0.44 | [0.19, 0.73] |
+
 ## Submit a detector
 
 Three axes, one contestant protocol each — see [docs/SUBMIT.md](docs/SUBMIT.md) for worked examples:
@@ -104,6 +125,16 @@ python -m mtm_bench tau2-leaderboard --split all ...    # ignore the split
 
 The split algorithm is `sha1(task_id)` stratified alternation — every trial of a given task lands
 on the same side, so no task appears in both dev and test.
+
+**What gold exists on each side.** The human-labeled census (`census_labels.jsonl`, n=40, airline)
+covers **test-split tasks only** — the census was conducted on the held-out partition. On `dev` you
+have the τ² oracle gold but no human labels: fine for measuring recall, but the truth-clean
+decomposition isn't available there. Likewise the frozen judge caches
+(`judge_caches/broad_prompt_diagnostic.json`) cover the test split only (the paper's held-out depth
+leg) — running `--split dev` against that cache produces **zero judge fires**, since it holds no dev
+task_ids. To tune a judge or detector: generate your own verdicts on the dev traces (grounding them
+in the shipped `data/tau2/policy/` files), score with `--split dev`, and report final numbers on
+`--split test`.
 
 ## Repo layout
 

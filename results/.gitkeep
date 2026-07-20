@@ -1,0 +1,1 @@
+# keeps results/ in git; run artifacts written here (results/*.json) are gitignored

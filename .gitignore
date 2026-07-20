@@ -5,3 +5,5 @@ __pycache__/
 dist/
 .pytest_cache/
 .ruff_cache/
+# local run artifacts (e.g. `mtm_bench tau2-leaderboard -o results/run.json`) — don't commit
+results/*.json
