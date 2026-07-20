@@ -8,8 +8,8 @@
     "bytes": 84457
   },
   "tau2/eval_manifest.json": {
-    "sha256": "1f2ce12a0648c9e976a9f11d56c60160bde0f34d6a40be9700144b76444f4ebd",
-    "bytes": 64882
+    "sha256": "deca4701294bcbddba3cecdc23e2d8f798552e80b6c9843adb1b12e77c6ad0cc",
+    "bytes": 134696
   },
   "tau2/judge_caches/broad_prompt_diagnostic.json": {
     "sha256": "1fcd5dfa67cff9228fb65bad08024152c7b30ad08ea31a737351b1f220295333",
@@ -30,6 +30,10 @@
   "tau2/policy/retail.md": {
     "sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467",
     "bytes": 6699
+  },
+  "tau2/policy/telecom.md": {
+    "sha256": "781296ae5419169cb64aac0c4fa2aa6129c78f3c1592f64abd80df6fbabb7042",
+    "bytes": 5200
   },
   "tau2/reveal.sealed.json": {
     "sha256": "04ca08b06bb9794946db0e0930e73e7851bfebdff56343ebca8e0f5256613bb6",
@@ -66,5 +70,21 @@
   "tau2/traces_retail_o4mini.json.gz": {
     "sha256": "418bbe052059204b5d5f4416a7a595dad6ee898dfe99284126ad9c4f772715ae",
     "bytes": 2063605
+  },
+  "tau2/traces_telecom_claude37sonnet.json.gz": {
+    "sha256": "a4da53008d95444bea4fb0e8e5c21bc5eae036e391a7223a325c7d832e1acaa4",
+    "bytes": 3917894
+  },
+  "tau2/traces_telecom_gpt41.json.gz": {
+    "sha256": "3ece0517760f8c905d7639209c751c2df070e3ada46d671b160209a114580470",
+    "bytes": 3278681
+  },
+  "tau2/traces_telecom_gpt41mini.json.gz": {
+    "sha256": "e6b9911c8537a8309701f242dff1982633ee691a403808d797f4eb74e3f1fb10",
+    "bytes": 3844198
+  },
+  "tau2/traces_telecom_o4mini.json.gz": {
+    "sha256": "bec1e0e73ee765a407b69a96f9f8f2a18e0cfea5f0fa623618dda5ffbe02bd49",
+    "bytes": 3021471
   }
 }
