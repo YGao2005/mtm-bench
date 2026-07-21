@@ -81,17 +81,22 @@ open("out.json", "w").write(report.to_json())   # JSON-safe (nan → null)
 
 ## Shipped baseline numbers
 
-Numbers from the shipped frozen caches (reproducible offline via `python scripts/reproduce_paper.py`):
+Every judge below replays from a frozen cache — all numbers reproduce offline. R = recall-on-corrupt
+(↑), F = fire-on-clean (↓). The gpt-4.1 cells (test split):
 
-**τ² outcome axis** (gpt-4.1 cells, test split, `broad_prompt` judge):
+| Judge | airline R / F | retail R / F | telecom R / F |
+|---|---|---|---|
+| Claude Sonnet 5 | 0.62 / 0.14 | 0.35 / 0.26 | 0.12 / 0.38 |
+| Claude Haiku 4.5 | 0.75 / 0.32 | 0.60 / 0.38 | 0.11 / 0.42 |
+| broad_prompt (Sonnet 4.6, paper) | 0.88 / 0.48 | 0.73 / 0.49 | — |
 
-| Domain | Recall (↑) | Fire-on-clean (↓) |
-|---|---|---|
-| airline | 0.88 | 0.48 |
-| retail | 0.73 | 0.49 |
-
-The other model cells (gpt-4.1-mini, o4-mini, Claude 3.7 Sonnet) and telecom ship oracle gold
-only — seat your own detector on them via `mtm-bench tau2-leaderboard` or `run-all`.
+The Sonnet 5 and Haiku 4.5 caches cover **all 12 cells** (2,256 test verdicts each) — the full
+table is one command: `python -m mtm_bench run-all`. Two things the table already shows: (1) no
+judge dominates — Haiku fires more and catches more, Sonnet 5 is conservative on both numbers, so
+neither is "better" without picking an operating point (this is why the ruler never pools); (2)
+telecom breaks every judge (R ≤ 0.2 at F ≥ 0.3 — *below* the random diagonal): its oracle
+failures are mostly process/workflow breakdowns, which a semantic policy judge is explicitly
+scoped to ignore. A detector that clears telecom recalls a failure class no shipped judge sees.
 
 **Truth-clean calibration audit** (n=40 human-labeled airline census):
 
