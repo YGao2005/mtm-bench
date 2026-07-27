@@ -23,3 +23,10 @@ packages = ["src/mtm_bench"]
 
 [tool.ruff]
 line-length = 100
+
+# Pin the rule set explicitly. Relying on ruff's defaults makes CI depend on whichever ruff
+# version the runner resolves — a newer default set silently changes which `# noqa` directives
+# are needed (e.g. dropping E402 turns every `# noqa: E402` in scripts/ into an RUF100
+# "unused directive" error, which is exactly how CI broke while local lint stayed green).
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
