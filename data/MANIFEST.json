@@ -88,8 +88,8 @@
     "bytes": 3021471
   },
   "tau2/judge_caches/sonnet5_full.json": {
-    "sha256": "0c82bf935025a1d8f3da8a12308b04e80a837918b22521dc0c5f92f05ddc663c",
-    "bytes": 2974085
+    "sha256": "6ebf602cdbf9458e74ec7180f270e34cbe0ac595fa7d3ed5a2579d09a4419b69",
+    "bytes": 2974086
   },
   "tau2/judge_caches/haiku45_full.json": {
     "sha256": "81a810518a17e428e4056a2337decdcf13ee78ad33c74f1cc153d9736484f040",

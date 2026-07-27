@@ -8,19 +8,30 @@ The judge prompt is the same as the argus `broad_prompt` judge: gives the model 
 + a serialized TRANSCRIPT, asks for a structured {violated, policy_basis, reasoning, confidence}
 verdict. It judges the SEMANTIC residual only (not structural mechanics).
 
+Requires AWS credentials that can reach Bedrock (standard boto3 resolution: env vars,
+`~/.aws/credentials`, SSO, instance role — whatever `boto3.Session()` picks up).
+
 Usage:
-  # Refresh creds first:
-  #   ada credentials update --account 183992492302 --provider isengard --role Admin --once
   uv run --extra judge python scripts/run_judge_baseline.py
 
-Models (edit below to add/remove):
-  - us.anthropic.claude-sonnet-5          (strong rung, ~$20 for 2,256 traces)
-  - us.anthropic.claude-haiku-4-5-20251001-v1:0  (cheap rung, ~$4.50)
+Long runs outlive short-lived credentials. The run checkpoints after every file and resumes
+from the cache, so the simplest recovery is to re-auth and re-run. If your org has a
+non-interactive refresh command, export it and the script will call it automatically when a
+request fails on expired credentials:
+
+  export MTM_CREDS_REFRESH_CMD='<your refresh command>'
+
+The MODELS list below is deliberately hardcoded: it is the specification of the shipped,
+hash-pinned caches, so the committed source records exactly what was run.
+  - us.anthropic.claude-sonnet-5                 (strong rung)
+  - us.anthropic.claude-haiku-4-5-20251001-v1:0  (cheap rung)
 """
 
 from __future__ import annotations
 
 import json
+import os
+import shlex
 import sys
 import time
 from pathlib import Path
@@ -32,9 +43,24 @@ sys.path.insert(0, str(ROOT / "src"))
 from mtm_bench.schema import SpanKind  # noqa: E402
 from mtm_bench.tau2_loader import held_out_task_ids, load_tau2_results  # noqa: E402
 
+# Per-model API params, stated as data rather than inferred from the model id. A new judge is a
+# data edit here; a wrong entry fails loudly on the first call instead of silently changing the
+# sampling config of a 2,256-call run.
+#   • Sonnet 5 defaults to extended thinking, which `tool_choice={"type": "tool"}` forbids — and it
+#     REJECTS `temperature` outright ("`temperature` is deprecated for this model", HTTP 400). So it
+#     takes `thinking: disabled` and no temperature.
+#   • Haiku 4.5 takes `temperature: 0` for determinism.
 MODELS = [
-    ("sonnet5", "us.anthropic.claude-sonnet-5"),
-    ("haiku45", "us.anthropic.claude-haiku-4-5-20251001-v1:0"),
+    {
+        "name": "sonnet5",
+        "id": "us.anthropic.claude-sonnet-5",
+        "params": {"thinking": {"type": "disabled"}},
+    },
+    {
+        "name": "haiku45",
+        "id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+        "params": {"temperature": 0},
+    },
 ]
 
 SYSTEM_PREAMBLE = (
@@ -97,7 +123,7 @@ MAX_RESULT_CHARS = 800
 
 def build_transcript(trace) -> str:
     lines = ["TRANSCRIPT (in order):", ""]
-    for s in sorted(trace.spans, key=lambda x: x.index):
+    for s in trace.ordered():
         if s.kind == SpanKind.USER_MSG:
             lines.append(f"USER: {(s.content or '').strip()}")
         elif s.kind == SpanKind.AGENT_MSG:
@@ -118,10 +144,10 @@ def build_transcript(trace) -> str:
     return "\n".join(lines)
 
 
-def judge_one(client, model_id: str, policy_text: str, trace) -> dict:
+def judge_one(client, model: dict, policy_text: str, trace) -> dict:
     transcript = build_transcript(trace)
-    kwargs = dict(
-        model=model_id,
+    response = client.messages.create(
+        model=model["id"],
         max_tokens=1024,
         tools=[VERDICT_TOOL],
         tool_choice={"type": "tool", "name": "record_verdict"},
@@ -131,14 +157,8 @@ def judge_one(client, model_id: str, policy_text: str, trace) -> dict:
              "cache_control": {"type": "ephemeral"}},
         ],
         messages=[{"role": "user", "content": transcript}],
+        **model["params"],
     )
-    # Models that default to extended thinking need it disabled for tool_choice=tool
-    if "sonnet-5" in model_id or "opus" in model_id or "fable" in model_id:
-        kwargs["thinking"] = {"type": "disabled"}
-    else:
-        kwargs["temperature"] = 0
-
-    response = client.messages.create(**kwargs)
     # Extract the tool use block
     for block in response.content:
         if block.type == "tool_use" and block.name == "record_verdict":
@@ -150,10 +170,15 @@ def judge_one(client, model_id: str, policy_text: str, trace) -> dict:
                 "reasoning": block.input.get("reasoning", ""),
                 "input_tokens": usage.input_tokens,
                 "output_tokens": usage.output_tokens,
+                # Both halves of the prompt-cache accounting: a below-minimum cacheable prefix
+                # no-ops SILENTLY (Haiku 4.5 needs 4096 tokens vs Sonnet's 1024), and recording
+                # only reads makes that invisible. See assert_prompt_cache_works().
                 "cache_read_tokens": getattr(usage, "cache_read_input_tokens", 0),
+                "cache_creation_tokens": getattr(usage, "cache_creation_input_tokens", 0),
             }
     return {"violated": False, "confidence": 0.0, "policy_basis": "parse_failure",
-            "reasoning": "no tool_use block in response", "input_tokens": 0, "output_tokens": 0}
+            "reasoning": "no tool_use block in response", "input_tokens": 0, "output_tokens": 0,
+            "cache_read_tokens": 0, "cache_creation_tokens": 0}
 
 
 def make_client():
@@ -171,38 +196,94 @@ def make_client():
     )
 
 
+class CredentialsExpired(RuntimeError):
+    """Raised when credentials expired and no refresh hook is configured."""
+
+
 def refresh_creds():
-    """Bedrock creds expire ~hourly; refresh in place and return a new client."""
+    """Re-acquire credentials and return a fresh client.
+
+    Credential lifecycles are org-specific, so the command is a documented seam rather than
+    something baked in: set ``MTM_CREDS_REFRESH_CMD`` to any non-interactive refresh command.
+    With no hook set we raise instead of guessing — the caller has already checkpointed, so
+    re-authing and re-running resumes from the cache with nothing lost or re-billed."""
     import subprocess
 
-    print("\n    [creds expired — refreshing via ada]", flush=True)
-    subprocess.run(
-        ["ada", "credentials", "update", "--account", "183992492302",
-         "--provider", "isengard", "--role", "Admin", "--once"],
-        check=True, capture_output=True,
-    )
+    cmd = os.environ.get("MTM_CREDS_REFRESH_CMD")
+    if not cmd:
+        raise CredentialsExpired(
+            "AWS credentials expired and MTM_CREDS_REFRESH_CMD is not set.\n"
+            "    Progress is checkpointed — re-authenticate and re-run to resume from the cache.\n"
+            "    To refresh automatically, export MTM_CREDS_REFRESH_CMD='<refresh command>'."
+        )
+    print(f"\n    [credentials expired — running MTM_CREDS_REFRESH_CMD: {cmd}]", flush=True)
+    subprocess.run(shlex.split(cmd), check=True, capture_output=True)
     time.sleep(2)
     return make_client()
+
+
+def assert_prompt_cache_works(client, model: dict, policy_text: str, traces) -> None:
+    """Fail fast if the cacheable prefix is below this model's minimum.
+
+    A too-short prefix does NOT error — ``cache_control`` silently no-ops, and you only find out
+    from the bill. This cost real money once: the shipped Haiku 4.5 cache has 0/2,256 cache hits
+    (~34% more input tokens than needed) because its prefix sat under Haiku's 4096-token minimum
+    while clearing Sonnet's 1024. Three calls up front make that visible before 2,256 do."""
+    probe = traces[:3]
+    if not probe:
+        return
+    reads = creates = 0
+    for t in probe:
+        v = judge_one(client, model, policy_text, t)
+        reads += v.get("cache_read_tokens", 0)
+        creates += v.get("cache_creation_tokens", 0)
+    if reads == 0 and creates == 0:
+        print(
+            f"    [WARN] {model['name']}: prompt cache is NOT engaging (0 read, 0 written over 3 "
+            f"probe calls) — the cacheable prefix is likely below this model's minimum, so every "
+            f"call bills the full prefix. Proceeding; lengthen the stable prefix to fix.",
+            flush=True,
+        )
+
+
+def judge_retrying(client, model: dict, policy_text: str, trace):
+    """Judge one trace, refreshing credentials once on an auth failure.
+
+    Returns ``(client, verdict)`` — the client may have been replaced by the refresh, so callers
+    must rebind it. Keeping the happy path in one place matters: when this body was duplicated
+    into the ``except`` arm, the retry's ``continue`` skipped the loop tail, so a refreshed trace
+    silently missed its checkpoint."""
+    try:
+        return client, judge_one(client, model, policy_text, trace)
+    except Exception as e:
+        if "expired" not in str(e).lower() and "403" not in str(e):
+            raise
+    client = refresh_creds()
+    return client, judge_one(client, model, policy_text, trace)
 
 
 def main():
     client = make_client()
     held = held_out_task_ids(DATA / "eval_manifest.json")
-    domains = ["airline", "retail", "telecom"]
+    # The manifest is the single source of truth for which domains exist — deriving the filter
+    # from it means a new domain needs no source edit here, and a domain can't be listed but
+    # silently unjudged for want of a manifest entry.
+    policies = {d: (DATA / "policy" / f"{d}.md").read_text() for d in held}
     trace_files = []
     for f in sorted(DATA.glob("traces_*.json.gz")):
         parts = f.name.removesuffix(".json.gz").split("_", 2)
         if len(parts) != 3:
             continue
         _, domain, model = parts
-        if domain in domains:
+        if domain in held:
             trace_files.append((f, domain, model))
 
     print(f"Will judge {len(trace_files)} files × {len(MODELS)} models")
     print("Test-split traces per file: filtered by held_out_task_ids")
     print()
 
-    for judge_name, judge_model in MODELS:
+    for judge in MODELS:
+        judge_name = judge["name"]
         cache_path = DATA / "judge_caches" / f"{judge_name}_full.json"
         # Resume from partial cache if exists
         existing = {}
@@ -211,87 +292,94 @@ def main():
             print(f"  resuming {judge_name}: {len(existing)} cached verdicts")
 
         verdicts = dict(existing)
-        total_input = total_output = 0
+        judged = 0  # new verdicts this run — drives the cred clock, cumulative across files
         errors = 0
+        cache_checked = False
+
+        def write_cache(
+            final: bool = False,
+            *,
+            path: Path = cache_path,
+            model_id: str = judge["id"],
+            name: str = judge_name,
+            rows: dict = verdicts,
+        ) -> None:
+            """Persist the cache. Totals are summed over ALL verdicts, not just newly-judged
+            ones, so a resumed run reports true totals instead of under-reporting by the
+            resumed portion. Written via a temp file + atomic replace so an interrupt mid-write
+            cannot truncate a multi-hour artifact. Per-judge values are bound as defaults rather
+            than captured, so the closure can't late-bind the next iteration's judge."""
+            totals = {}
+            if final:
+                totals = {
+                    "total_input_tokens": sum(v.get("input_tokens", 0) for v in rows.values()),
+                    "total_output_tokens": sum(v.get("output_tokens", 0) for v in rows.values()),
+                }
+            blob = json.dumps({
+                "model": model_id,
+                "judge_name": name,
+                "n_verdicts": len(rows),
+                **totals,
+                "verdicts": rows,
+            }, indent=2 if final else None) + "\n"
+            tmp = path.with_suffix(".json.tmp")
+            tmp.write_text(blob)
+            tmp.replace(path)
 
         for tf, domain, agent_model in trace_files:
-            policy_text = (DATA / "policy" / f"{domain}.md").read_text()
-            test_tids = held.get(domain, set())
+            policy_text = policies[domain]
             traces = [
                 t for t in load_tau2_results(tf, domain, policy_text=policy_text)
-                if t.meta.get("task_id") in test_tids
+                if t.meta.get("task_id") in held[domain]
             ]
-            already = sum(1 for t in traces if t.trace_id in verdicts)
             remaining = [t for t in traces if t.trace_id not in verdicts]
             if not remaining:
                 print(f"  {judge_name} | {agent_model}/{domain}: "
                       f"all {len(traces)} cached, skip")
                 continue
-            print(f"  {judge_name} | {agent_model}/{domain}: "
-                  f"{len(remaining)} to judge ({already} cached)...", end="", flush=True)
+            # One 3-call probe per judge, on the first file with work to do.
+            if not cache_checked:
+                assert_prompt_cache_works(client, judge, policy_text, remaining)
+                cache_checked = True
+            print(f"  {judge_name} | {agent_model}/{domain}: {len(remaining)} to judge "
+                  f"({len(traces) - len(remaining)} cached)...", end="", flush=True)
 
             for i, t in enumerate(remaining):
                 try:
-                    v = judge_one(client, judge_model, policy_text, t)
-                    verdicts[t.trace_id] = v
-                    total_input += v.get("input_tokens", 0)
-                    total_output += v.get("output_tokens", 0)
+                    client, v = judge_retrying(client, judge, policy_text, t)
+                except CredentialsExpired as e:
+                    write_cache()
+                    print(f"\n    {e}")
+                    return 1
                 except Exception as e:
-                    if "expired" in str(e).lower() or "403" in str(e):
-                        client = refresh_creds()
-                        try:
-                            v = judge_one(client, judge_model, policy_text, t)
-                            verdicts[t.trace_id] = v
-                            total_input += v.get("input_tokens", 0)
-                            total_output += v.get("output_tokens", 0)
-                            continue
-                        except Exception as e2:
-                            e = e2
                     errors += 1
                     print(f"\n    ERROR on {t.trace_id}: {e}")
                     if errors > 10:
-                        print("    too many errors, aborting this model")
+                        print("    too many errors, aborting this file")
                         break
                     time.sleep(2)
                     continue
+                verdicts[t.trace_id] = v
+                judged += 1
 
-                # Proactive cred refresh every 500 traces (creds last ~1hr, ~4 traces/min)
-                if (len(verdicts) - len(existing)) % 500 == 0 and len(verdicts) > len(existing):
+                # Proactive cred refresh (creds are often ~1h; ~4 traces/min). Cumulative
+                # across files on purpose — credentials expire on wall-clock, not per file.
+                if judged % 500 == 0:
                     client = refresh_creds()
 
-                # Progress every 50
                 if (i + 1) % 50 == 0:
                     print(f" {i+1}", end="", flush=True)
-                    # Checkpoint
-                    cache_path.write_text(json.dumps({
-                        "model": judge_model,
-                        "judge_name": judge_name,
-                        "n_verdicts": len(verdicts),
-                        "verdicts": verdicts,
-                    }, indent=None) + "\n")
+                    write_cache()
             print(f" done ({len(verdicts)} total)")
+            write_cache()
 
-            # Checkpoint after each file
-            cache_path.write_text(json.dumps({
-                "model": judge_model,
-                "judge_name": judge_name,
-                "n_verdicts": len(verdicts),
-                "verdicts": verdicts,
-            }, indent=None) + "\n")
-
-        # Final write
-        cache_path.write_text(json.dumps({
-            "model": judge_model,
-            "judge_name": judge_name,
-            "n_verdicts": len(verdicts),
-            "total_input_tokens": total_input,
-            "total_output_tokens": total_output,
-            "verdicts": verdicts,
-        }, indent=2) + "\n")
+        write_cache(final=True)
+        blob = json.loads(cache_path.read_text())
         print(f"\n  {judge_name} DONE: {len(verdicts)} verdicts, "
-              f"{total_input:,} in / {total_output:,} out tokens")
+              f"{blob['total_input_tokens']:,} in / {blob['total_output_tokens']:,} out tokens")
         print(f"  saved to {cache_path}\n")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

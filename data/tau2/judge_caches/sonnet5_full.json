@@ -2,8 +2,8 @@
   "model": "us.anthropic.claude-sonnet-5",
   "judge_name": "sonnet5",
   "n_verdicts": 2256,
-  "total_input_tokens": 3613534,
-  "total_output_tokens": 254683,
+  "total_input_tokens": 10606795,
+  "total_output_tokens": 969333,
   "verdicts": {
     "3f0cac3f-4387-403c-9227-31d0be509278": {
       "violated": false,

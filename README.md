@@ -91,12 +91,16 @@ Every judge below replays from a frozen cache — all numbers reproduce offline.
 | broad_prompt (Sonnet 4.6, paper) | 0.88 / 0.48 | 0.73 / 0.49 | — |
 
 The Sonnet 5 and Haiku 4.5 caches cover **all 12 cells** (2,256 test verdicts each) — the full
-table is one command: `python -m mtm_bench run-all`. Two things the table already shows: (1) no
+table is one command: `python -m mtm_bench run-all`. Those caches were produced by
+`scripts/run_judge_baseline.py` (needs Bedrock credentials and the `judge` extra; it checkpoints
+and resumes, so scoring never re-bills). Adding a judge rung is a data edit to its `MODELS` list. Two things the table already shows: (1) no
 judge dominates — Haiku fires more and catches more, Sonnet 5 is conservative on both numbers, so
 neither is "better" without picking an operating point (this is why the ruler never pools); (2)
-telecom breaks every judge (R ≤ 0.2 at F ≥ 0.3 — *below* the random diagonal): its oracle
-failures are mostly process/workflow breakdowns, which a semantic policy judge is explicitly
-scoped to ignore. A detector that clears telecom recalls a failure class no shipped judge sees.
+telecom breaks every judge (R ≤ 0.2 at F ≥ 0.3 — *below* the random diagonal). We *hypothesize*
+telecom's oracle failures skew toward process/workflow breakdowns, which this judge prompt is
+explicitly scoped to ignore — but the repo ships **no telecom failure-class labels**, so that
+mechanism is untested (the n=40 human census is airline-only). Either way the gap is real and
+measured: a detector that clears telecom recalls something no shipped judge does.
 
 **Truth-clean calibration audit** (n=40 human-labeled airline census):
 
